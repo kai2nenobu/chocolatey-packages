@@ -44,10 +44,9 @@ So I made it possible to register snippets with description and search them easi
     <licenseUrl>https://github.com/knqyf263/pet/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/knqyf263/pet/doc/logo.png</iconUrl>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://github.com/knqyf263/pet/releases</releaseNotes>
     <docsUrl>https://github.com/knqyf263/pet/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/knqyf263/pet/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/knqyf263/pet</projectSourceUrl>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/pet</packageSourceUrl>
     <dependencies></dependencies>
   </metadata>
