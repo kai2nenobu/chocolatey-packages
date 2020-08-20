@@ -7,7 +7,9 @@
     <authors>Yuko Otawara</authors>
     <owners>kai2nenobu</owners>
     <summary>HackGen is a composite font of Hack and GenJyuu-Gothic. プログラミングフォント 白源</summary>
-    <description><![CDATA[[hackgen_version]: https://img.shields.io/chocolatey/v/hackgen.svg
+    <description><![CDATA[# HackGen [![hackgen version][hackgen_version]][hackgen_package]
+
+[hackgen_version]: https://img.shields.io/chocolatey/v/hackgen.svg
 [hackgen_package]: https://chocolatey.org/packages/hackgen
 
 HackGen is a programming font that is a combination of Hack, an English font for programming, and GenJyuu-Gothic, a derivative of Source Han Sans.
