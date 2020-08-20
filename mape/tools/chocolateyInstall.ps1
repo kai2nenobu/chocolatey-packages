@@ -6,8 +6,8 @@ $scriptDirectory = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 
 $packageName = $env:ChocolateyPackageName
 $location    = $env:ChocolateyPackageFolder
-$url = 'https://github.com/ipponshimeji/MAPE/raw/master/Releases/MAPE_1.0.21.0_Windows.zip'
-$checksum = '87c253040a7d415660e3c804827e9048f628f5639d9648352cc6fa2512c099d8'
+$url = 'https://github.com/ipponshimeji/MAPE/raw/master/Releases/MAPE_1.0.20.0_Windows.zip'
+$checksum = '716618dcf11a8d9d1210aee09a62e3a6ca18d0f7b9e716ad6e96e830730b3df2'
 
 ## Download and unpack a zip file - https://chocolatey.org/docs/helpers-install-chocolatey-zip-package
 Install-ChocolateyZipPackage `
