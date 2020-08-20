@@ -15,9 +15,7 @@
     <docsUrl>https://github.com/ipponshimeji/MAPE/blob/master/Documentation/ja/Index.md</docsUrl>
     <bugTrackerUrl>https://github.com/ipponshimeji/MAPE/issues</bugTrackerUrl>
     <tags>proxy</tags>
-    <summary>
-「認証プロキシ爆発しろ！」（英語名 MAPE: May Authentication Proxies Explode）は、 認証プロキシに対する苛立ちや呪詛の思いによって心が濁ることをソフトウェア的になんとか防ぐためのツールです。
-    </summary>
+    <summary>May Authentication Proxies Explode (MAPE) is a transparent proxy tool. "認証プロキシ爆発しろ！" is the japanese word for a frustrated shout against authentication proxies.</summary>
     <description>
 このツールは認証プロキシに対するプロキシとして機能します。 認証プロキシが認証を要求した場合、 発信元のソフトウェアにまで戻ることなく、 このツールが認証情報を追加して、 リクエストを認証プロキシに対して再送信します。 結果として、 認証プロキシ非対応ソフトウェアが認証プロキシ環境内で動作できるようになります。
 
