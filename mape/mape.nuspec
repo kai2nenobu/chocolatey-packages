@@ -8,9 +8,9 @@
     <title>May Authentication Proxies Explode</title>
     <authors>Takamasa Uramoto</authors>
     <projectUrl>https://github.com/ipponshimeji/MAPE</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/ipponshimeji/MAPE@1.0.21.0_beta/Source/Windows/GUI/Resources/OnIcon.ico</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ipponshimeji/MAPE/Source/Windows/GUI/Resources/OnIcon.ico</iconUrl>
     <copyright>Takamasa Uramoto</copyright>
-    <licenseUrl>https://github.com/ipponshimeji/MAPE/blob/1.0.21.0_beta/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/ipponshimeji/MAPE/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://github.com/ipponshimeji/MAPE/blob/master/Documentation/ja/Index.md</docsUrl>
     <bugTrackerUrl>https://github.com/ipponshimeji/MAPE/issues</bugTrackerUrl>
