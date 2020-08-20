@@ -36,7 +36,6 @@ jobs:
           7z a au_temp.zip $Env:TEMP\chocolatey\au\*
         env:
           au_push: true
-          au_pushurl: https://www.myget.org/F/kai2nenobu # Where to push packages
           # Github token to commit pushed packages to repository
           github_user_repo: ${{ github.repository }}
           github_api_key: ${{ secrets.AU_GITHUB_API_KEY }}
@@ -49,7 +48,7 @@ jobs:
           gist_id_test:
 
           # Chocolatey API key - to push updated packages
-          api_key: ${{ secrets.MYGET_API_KEY }}
+          api_key: ${{ secrets.CHOCOLATEY_API_KEY }}
 
           # Slack webhook URL
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
