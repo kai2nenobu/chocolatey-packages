@@ -2,7 +2,7 @@
 
 This repository contains chocolatey packages maintained by [kai2nenobu](https://chocolatey.org/profiles/kai2nenobu).
 
-These packages are built on [AppVeyor](https://www.appveyor.com/) and published into [Chocolatey.org](https://chocolatey.org/).
+These packages are built on [GitHub Actions](https://github.com/kai2nenobu/chocolatey-packages/actions) and published into [Chocolatey.org](https://chocolatey.org/).
 Some packages are automatically updated by using [AU](https://github.com/majkinetor/au). ([Update Report](https://gist.github.com/kai2nenobu/bcca7b715c28d0fad4e2364eb5340438))
 
 # Package List
