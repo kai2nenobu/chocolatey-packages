@@ -47,4 +47,4 @@ function global:au_SearchReplace {
 
 $env:ChocolateyPackageName = 'mape'
 $env:ChocolateyPackageFolder = '.'
-Update-Package -NoReadme
+Update-Package
