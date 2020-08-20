@@ -1,6 +1,6 @@
 
 <!-- First 2 lines are stripped by AU -->
-# <img src="https://cdn.jsdelivr.net/gh/ipponshimeji/MAPE/Source/Windows/GUI/Resources/OnIcon.ico" width="48" height="48"/> May Authentication Proxies Explode [![mape version][mape_version]][mape_package]
+# May Authentication Proxies Explode [![mape version][mape_version]][mape_package]
 
 [mape_version]: https://img.shields.io/chocolatey/v/mape.svg
 [mape_package]: https://chocolatey.org/packages/mape

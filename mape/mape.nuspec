@@ -16,7 +16,7 @@
     <bugTrackerUrl>https://github.com/ipponshimeji/MAPE/issues</bugTrackerUrl>
     <tags>proxy japanese</tags>
     <summary>May Authentication Proxies Explode (MAPE) is a transparent proxy tool. "認証プロキシ爆発しろ！" is the japanese word for a frustrated shout against authentication proxies.</summary>
-    <description><![CDATA[# <img src="https://cdn.jsdelivr.net/gh/ipponshimeji/MAPE/Source/Windows/GUI/Resources/OnIcon.ico" width="48" height="48"/> May Authentication Proxies Explode [![mape version][mape_version]][mape_package]
+    <description><![CDATA[# May Authentication Proxies Explode [![mape version][mape_version]][mape_package]
 
 [mape_version]: https://img.shields.io/chocolatey/v/mape.svg
 [mape_package]: https://chocolatey.org/packages/mape
