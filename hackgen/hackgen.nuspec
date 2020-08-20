@@ -18,7 +18,7 @@
     <docsUrl>https://github.com/yuru7/HackGen/blob/v2.0.0/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/yuru7/HackGen/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/yuru7/HackGen</projectSourceUrl>
-    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/hackgen</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/hackgen</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-font-helpers.extension" />
     </dependencies>
