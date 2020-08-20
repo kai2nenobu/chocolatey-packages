@@ -7,8 +7,8 @@
     <authors>Teppei Fukuda</authors>
     <owners>kai2nenobu</owners>
     <summary>Simple command-line snippet manager, written in Go.</summary>
-    <description><![CDATA[[pet_version]: https://img.shields.io/myget/kai2nenobu/v/pet.svg?label=pet
-[pet_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pet
+    <description><![CDATA[[pet_version]: https://img.shields.io/chocolatey/v/pet.svg
+[pet_package]: https://chocolatey.org/packages/pet
 
 `pet` is written in Go, and therefore you can just grab the binary releases and drop it in your $PATH.
 
@@ -47,7 +47,7 @@ So I made it possible to register snippets with description and search them easi
     <releaseNotes>https://github.com/knqyf263/pet/releases</releaseNotes>
     <docsUrl>https://github.com/knqyf263/pet/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/knqyf263/pet/issues</bugTrackerUrl>
-    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/pet</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/pet</packageSourceUrl>
     <dependencies></dependencies>
   </metadata>
   <files>
