@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mape</id>
     <version>1.0.21.0</version>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/mape</packageSourceUrl>
-    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>kai2nenobu</owners>
-    <!-- ============================== -->
-
-    <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <!-- This section is about the software itself -->
     <title>May Authentication Proxies Explode</title>
     <authors>Takamasa Uramoto</authors>
     <projectUrl>https://github.com/ipponshimeji/MAPE</projectUrl>
     <iconUrl>https://cdn.rawgit.com/ipponshimeji/MAPE/1.0.21.0_beta/Source/Windows/GUI/Resources/OnIcon.ico</iconUrl>
     <copyright>Takamasa Uramoto</copyright>
-    <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/ipponshimeji/MAPE/blob/1.0.21.0_beta/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/ipponshimeji/MAPE</projectSourceUrl>
     <docsUrl>https://github.com/ipponshimeji/MAPE/blob/master/Documentation/ja/Index.md</docsUrl>
-    <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/ipponshimeji/MAPE/issues</bugTrackerUrl>
     <tags>proxy</tags>
     <summary>
@@ -34,9 +26,6 @@
 
 Windowsデスクトップで実行した場合、 このツールは、 通信の中継を開始する際に、 ユーザーのプロキシ設定を自動的に書き換え、 このツールがユーザーの指定プロキシとなるようにします。 通信の中継を停止する際に、 書き換えた設定を元に戻します。
     </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
-    <!-- =============================== -->
-
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
