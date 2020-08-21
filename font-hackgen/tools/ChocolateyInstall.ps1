@@ -4,7 +4,6 @@
 $toolsDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 . (Join-Path $toolsDir 'common.ps1')
 
-$hackgenVersion = 'v2.0.0'
 $hackgenBase = "HackGen_${hackgenVersion}"
 $extractDir = (Join-Path $toolsDir $hackgenBase)
 

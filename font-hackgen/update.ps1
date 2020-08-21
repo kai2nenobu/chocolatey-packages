@@ -128,26 +128,59 @@ function global:au_GetLatest {
       Write-Warning ('Ignore invalid tag name: "{0}"' -f $tag)
       continue
     }
-    $url = $release.assets | Where-Object { $_.name -eq "HackGen_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
+    $version = $tag -replace "^v",""
+    $normalZip = $release.assets | Where-Object { $_.name -eq "HackGen_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
+    $nerdZip = $release.assets | Where-Object { $_.name -eq "HackGenNerd_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
     return @{
-      Tag = $tag
-      Version = $tag -replace "^v",""
-      URL32 = $url
+      Streams = [ordered] @{
+        'normal' = @{
+          PackageName = 'font-hackgen'
+          Title = 'Programming Font HackGen'
+          Tag = $tag
+          Version = $version
+          URL32 = $normalZip
+          Prefix = 'HackGen'
+        }
+        'nerd' = @{
+          PackageName = 'font-hackgen-nerd'
+          Title = 'Programming Font HackGen with Nerd Fonts'
+          Tag = $tag
+          Version = $version
+          URL32 = $nerdZip
+          Prefix = 'HackGenNerd'
+        }
+      }
     }
   }
 }
 
 function global:au_SearchReplace {
-   @{
-        ".\font-hackgen.nuspec" = @{
-          '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
-          '(/HackGen/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
-        }
-        ".\tools\ChocolateyInstall.ps1" = @{
-          '(hackgenVersion\s*=).*' = "`${1} '$($Latest.Tag)'"
-          '(Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
-        }
+  # Replacement for font names
+  if ($Latest.Stream -eq 'nerd') {
+    $fontReplacement = 'HackGen${1}Nerd${3}'
+  } else {
+    $fontReplacement = 'HackGen${1}${3}'
+  }
+  @{
+    ".\font-hackgen.nuspec" = @{
+      '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
+      '(/HackGen/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
+      '(?i)(^\s*\<title\>).*(\<\/title\>)' = "`${1}$($Latest.Title)`${2}"
     }
+    ".\tools\ChocolateyInstall.ps1" = @{
+      '^([$]hackgenBase\s*=).*' = "`${1} '$($Latest.Prefix)_$($Latest.Tag)'"
+      '^(\s*PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
+      '^(\s*Url\s*=).*' = "`${1} '$($Latest.URL32)'"
+      '^(\s*Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
+    }
+    ".\tools\common.ps1" = @{
+      'HackGen(35)?(Nerd)?(Console)?-' = $fontReplacement + '-'
+    }
+    ".\README.md" = @{
+      'font-hackgen(-nerd)?' = $Latest.PackageName
+      '`HackGen(35)?(Nerd)?( Console)?`' = '`' + $fontReplacement + '`'
+    }
+  }
 }
 
 Update-Package
