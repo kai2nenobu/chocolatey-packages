@@ -9,12 +9,12 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 
 | id         | title                                                        | version                                    | embedded? | auto update? |
 |------------|--------------------------------------------------------------|--------------------------------------------|-----------|--------------|
-| [hackgen](hackgen) | [Programming Font HackGen](https://github.com/yuru7/HackGen) | [![hackgen version][hackgen_version]][hackgen_package] |           | ✓            |
+| [font-hackgen](font-hackgen) | [Programming Font HackGen](https://github.com/yuru7/HackGen) | [![font-hackgen version][font-hackgen_version]][font-hackgen_package] |           | ✓            |
 | [mape](mape) | [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE) | [![mape version][mape_version]][mape_package] |           | ✓            |
 | [pet](pet) | [pet : CLI Snippet Manager](https://github.com/knqyf263/pet) | [![pet version][pet_version]][pet_package] | ✓         | ✓            |
 
-[hackgen_version]: https://img.shields.io/chocolatey/v/hackgen.svg
-[hackgen_package]: https://chocolatey.org/packages/hackgen
+[font-hackgen_version]: https://img.shields.io/chocolatey/v/font-hackgen.svg
+[font-hackgen_package]: https://chocolatey.org/packages/font-hackgen
 [mape_version]: https://img.shields.io/chocolatey/v/mape.svg
 [mape_package]: https://chocolatey.org/packages/mape
 [pet_version]: https://img.shields.io/chocolatey/v/pet.svg

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>hackgen</id>
+    <id>font-hackgen</id>
     <title>Programming Font HackGen</title>
     <version>2.0.0</version>
     <authors>Yuko Otawara</authors>
     <owners>kai2nenobu</owners>
     <summary>HackGen is a composite font of Hack and GenJyuu-Gothic. プログラミングフォント 白源</summary>
-    <description><![CDATA[# HackGen [![hackgen version][hackgen_version]][hackgen_package]
+    <description><![CDATA[# HackGen [![font-hackgen version][font-hackgen_version]][font-hackgen_package]
 
-[hackgen_version]: https://img.shields.io/chocolatey/v/hackgen.svg
-[hackgen_package]: https://chocolatey.org/packages/hackgen
+[font-hackgen_version]: https://img.shields.io/chocolatey/v/font-hackgen.svg
+[font-hackgen_package]: https://chocolatey.org/packages/font-hackgen
 
 HackGen is a programming font that is a combination of Hack, an English font for programming, and GenJyuu-Gothic, a derivative of Source Han Sans.
 
@@ -56,7 +56,7 @@ Remove the HackGen or close any applications that use HackGen before trying to i
     <docsUrl>https://github.com/yuru7/HackGen/blob/v2.0.0/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/yuru7/HackGen/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/yuru7/HackGen</projectSourceUrl>
-    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/hackgen</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/font-hackgen</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-font-helpers.extension" />
     </dependencies>

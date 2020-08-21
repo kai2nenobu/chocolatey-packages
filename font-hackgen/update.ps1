@@ -139,7 +139,7 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
    @{
-        ".\hackgen.nuspec" = @{
+        ".\font-hackgen.nuspec" = @{
           '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
           '(/HackGen/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
         }

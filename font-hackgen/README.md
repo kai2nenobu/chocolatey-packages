@@ -1,9 +1,9 @@
 
 
-# HackGen [![hackgen version][hackgen_version]][hackgen_package]
+# HackGen [![font-hackgen version][font-hackgen_version]][font-hackgen_package]
 
-[hackgen_version]: https://img.shields.io/chocolatey/v/hackgen.svg
-[hackgen_package]: https://chocolatey.org/packages/hackgen
+[font-hackgen_version]: https://img.shields.io/chocolatey/v/font-hackgen.svg
+[font-hackgen_package]: https://chocolatey.org/packages/font-hackgen
 
 HackGen is a programming font that is a combination of Hack, an English font for programming, and GenJyuu-Gothic, a derivative of Source Han Sans.
 
