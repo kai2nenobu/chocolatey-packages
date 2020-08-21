@@ -155,11 +155,11 @@ function global:au_GetLatest {
 }
 
 function global:au_SearchReplace {
-  # Replace font names in common.ps1
+  # Replacement for font names
   if ($Latest.Stream -eq 'nerd') {
-    $fontReplacement = 'HackGen${1}Nerd${3}-'
+    $fontReplacement = 'HackGen${1}Nerd${3}'
   } else {
-    $fontReplacement = 'HackGen${1}${3}-'
+    $fontReplacement = 'HackGen${1}${3}'
   }
    @{
         ".\font-hackgen.nuspec" = @{
@@ -174,7 +174,11 @@ function global:au_SearchReplace {
           '^(\s*Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
         }
         ".\tools\common.ps1" = @{
-          'HackGen(35)?(Nerd)?(Console)?-' = $fontReplacement
+          'HackGen(35)?(Nerd)?(Console)?-' = $fontReplacement + '-'
+        }
+        ".\README.md" = @{
+          'font-hackgen(-nerd)?' = $Latest.PackageName
+          '`HackGen(35)?(Nerd)?( Console)?`' = '`' + $fontReplacement + '`'
         }
     }
 }
