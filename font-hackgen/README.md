@@ -16,7 +16,7 @@ This package installs following fonts on system font folder (`C:\Windows\Fonts`)
 
 If the installation or update of this package fails, it may be for the following reasons.
 
-- Hakuen is already installed.
+- HakuGen is already installed.
 - Some applications are using HakuGen.
 
 Remove the HackGen or close any applications that use HackGen before trying to install or update the package.
@@ -37,4 +37,4 @@ Remove the HackGen or close any applications that use HackGen before trying to i
 - 白源フォントが既にインストールされている
 - 起動しているアプリケーションが白源フォントを使用している
 
-既にインストールされているフォントを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。
+既にインストールされている白源フォントを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。
