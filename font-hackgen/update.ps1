@@ -170,8 +170,8 @@ function global:au_SearchReplace {
         ".\tools\ChocolateyInstall.ps1" = @{
           '^([$]hackgenVersion\s*=).*' = "`${1} '$($Latest.Tag)'"
           '^([$]hackgenBase\s*=).*' = "`${1} '$($Latest.Prefix)_$($Latest.Tag)'"
-          '(PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
-          '(Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
+          '^\s*(PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
+          '^\s*(Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
         }
         ".\tools\common.ps1" = @{
           'HackGen(35)?(Nerd)?(Console)?-' = $fontReplacement
