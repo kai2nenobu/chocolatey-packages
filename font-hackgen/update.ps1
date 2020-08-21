@@ -161,26 +161,26 @@ function global:au_SearchReplace {
   } else {
     $fontReplacement = 'HackGen${1}${3}'
   }
-   @{
-        ".\font-hackgen.nuspec" = @{
-          '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
-          '(/HackGen/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
-          '(?i)(^\s*\<title\>).*(\<\/title\>)' = "`${1}$($Latest.Title)`${2}"
-        }
-        ".\tools\ChocolateyInstall.ps1" = @{
-          '^([$]hackgenBase\s*=).*' = "`${1} '$($Latest.Prefix)_$($Latest.Tag)'"
-          '^(\s*PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
-          '^(\s*Url\s*=).*' = "`${1} '$($Latest.URL32)'"
-          '^(\s*Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
-        }
-        ".\tools\common.ps1" = @{
-          'HackGen(35)?(Nerd)?(Console)?-' = $fontReplacement + '-'
-        }
-        ".\README.md" = @{
-          'font-hackgen(-nerd)?' = $Latest.PackageName
-          '`HackGen(35)?(Nerd)?( Console)?`' = '`' + $fontReplacement + '`'
-        }
+  @{
+    ".\font-hackgen.nuspec" = @{
+      '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
+      '(/HackGen/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
+      '(?i)(^\s*\<title\>).*(\<\/title\>)' = "`${1}$($Latest.Title)`${2}"
     }
+    ".\tools\ChocolateyInstall.ps1" = @{
+      '^([$]hackgenBase\s*=).*' = "`${1} '$($Latest.Prefix)_$($Latest.Tag)'"
+      '^(\s*PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
+      '^(\s*Url\s*=).*' = "`${1} '$($Latest.URL32)'"
+      '^(\s*Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
+    }
+    ".\tools\common.ps1" = @{
+      'HackGen(35)?(Nerd)?(Console)?-' = $fontReplacement + '-'
+    }
+    ".\README.md" = @{
+      'font-hackgen(-nerd)?' = $Latest.PackageName
+      '`HackGen(35)?(Nerd)?( Console)?`' = '`' + $fontReplacement + '`'
+    }
+  }
 }
 
 Update-Package
