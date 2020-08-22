@@ -55,7 +55,6 @@ Remove the HackGen or close any applications that use HackGen before trying to i
     <releaseNotes>https://github.com/yuru7/HackGen/releases/tag/v2.0.0</releaseNotes>
     <docsUrl>https://github.com/yuru7/HackGen/blob/v2.0.0/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/yuru7/HackGen/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/yuru7/HackGen</projectSourceUrl>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/font-hackgen</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-font-helpers.extension" version="0.0.2" />
