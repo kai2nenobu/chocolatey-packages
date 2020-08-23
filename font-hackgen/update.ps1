@@ -175,7 +175,6 @@ function global:au_SearchReplace {
       'HackGen(35)?(Nerd)?(Console)?-' = $fontReplacement + '-'
     }
     ".\README.md" = @{
-      'font-hackgen(-nerd)?' = $Latest.PackageName
       '`HackGen(35)?(Nerd)?( Console)?`' = '`' + $fontReplacement + '`'
     }
   }
