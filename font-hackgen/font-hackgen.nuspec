@@ -46,7 +46,8 @@ Remove the HackGen or close any applications that use HackGen before trying to i
 
 既にインストールされているフォントを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。
 ]]></description>
-    <projectUrl>https://github.com/yuru7/HackGen</projectUrl>
+    <projectUrl>https://qiita.com/tawara_/items/374f3ca0a386fab8b305</projectUrl>
+    <projectSourceUrl>https://github.com/yuru7/HackGen</projectSourceUrl>
     <tags>font admin hack source-han-sans monospace programming truetype japanese</tags>
     <copyright>Yuko Otawara</copyright>
     <licenseUrl>https://github.com/yuru7/HackGen/blob/v2.0.0/LICENSE.txt</licenseUrl>
