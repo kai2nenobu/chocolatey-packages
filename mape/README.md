@@ -9,7 +9,7 @@ May Authentication Proxies Explode (MAPE) is a transparent proxy tool. This pack
 
 ## Install Information
 
-MAPE executables (`mape.exe` and `mapedgui.exe`) are installed at `%ChocolateyInstall%\lib\mape\MAPE` (typically `C:\ProgramData\chocolatey\lib\mape\MAPE`) and both are included in `PATH` environment variable.
+MAPE executables (`mape.exe` and `mapegui.exe`) are installed at `%ChocolateyInstall%\lib\mape\MAPE` (typically `C:\ProgramData\chocolatey\lib\mape\MAPE`) and both are included in `PATH` environment variable.
 
 Additionally, a shortcut to `mapegui.exe` is created and accessible from start menu.
 
