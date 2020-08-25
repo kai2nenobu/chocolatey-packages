@@ -40,3 +40,9 @@ Remove the HackGen or close any applications that use HackGen before trying to i
 - 起動しているアプリケーションが白源フォントを使用している
 
 既にインストールされている白源フォントを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。
+
+# Screenshots
+
+| HackGen                                                               | HackGen35                                                                 |
+|-----------------------------------------------------------------------|---------------------------------------------------------------------------|
+| ![hackgen](https://github.com/yuru7/HackGen/raw/image/sc_hackgen.png) | ![hackgen35](https://github.com/yuru7/HackGen/raw/image/sc_hackgen35.png) |
