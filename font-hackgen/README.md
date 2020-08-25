@@ -7,7 +7,7 @@ This directory stores sources of two packages, [![font-hackgen][font-hackgen_ver
 [font-hackgen-nerd_version]: https://img.shields.io/chocolatey/v/font-hackgen-nerd.svg?label=font-hackgen-nerd
 [font-hackgen-nerd_package]: https://chocolatey.org/packages/font-hackgen-nerd
 
-HackGen is a programming font that is a combination of Hack, an English font for programming, and GenJyuu-Gothic, a derivative of Source Han Sans.
+[HackGen](https://github.com/yuru7/HackGen) is a programming font that is a combination of Hack, an English font for programming, and GenJyuu-Gothic, a derivative of Source Han Sans.
 
 This package installs following fonts on system font folder (`C:\Windows\Fonts`).
 
@@ -25,7 +25,7 @@ Remove the HackGen or close any applications that use HackGen before trying to i
 
 # プログラミングフォント 白源
 
-白源（はくげん）は、プログラミング向け英文フォントHackと、源ノ角ゴシックの派生フォント源柔ゴシックを合成したプログラミングフォントです。
+[白源](https://github.com/yuru7/HackGen)（はくげん）は、プログラミング向け英文フォントHackと、源ノ角ゴシックの派生フォント源柔ゴシックを合成したプログラミングフォントです。
 
 このパッケージは以下のフォントをシステム全体にインストールします。（`C:\Windows\Fonts`にインストールされます）
 
