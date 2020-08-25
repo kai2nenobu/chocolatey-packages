@@ -1,3 +1,10 @@
+[![Auto Update][auto_update_badge]][auto_update_actions]
+
+[auto_update_badge]: https://github.com/kai2nenobu/chocolatey-packages/workflows/Auto%20Update/badge.svg
+[auto_update_actions]: https://github.com/kai2nenobu/chocolatey-packages/actions?query=workflow%3A%22Auto+Update%22
+
+----
+
 # What is this repository?
 
 This repository contains chocolatey packages maintained by [kai2nenobu](https://chocolatey.org/profiles/kai2nenobu).
@@ -24,3 +31,4 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 [pet_package]: https://chocolatey.org/packages/pet
 
 If you want to know the complete list, see <https://chocolatey.org/profiles/kai2nenobu#profile-packages>.
+
