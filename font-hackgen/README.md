@@ -21,7 +21,7 @@ If the installation or update of this package fails, it may be for the following
 - HakuGen is already installed.
 - Some applications are using HakuGen.
 
-Remove the HackGen or close any applications that use HackGen before trying to install or update the package.
+Remove the HackGen or close any applications that use HackGen before trying to install or update the package. If you have a problem about this package, please visit [the package repository](https://github.com/kai2nenobu/chocolatey-packages/) and post a issue.
 
 # プログラミングフォント 白源
 
@@ -39,7 +39,7 @@ Remove the HackGen or close any applications that use HackGen before trying to i
 - 白源フォントが既にインストールされている
 - 起動しているアプリケーションが白源フォントを使用している
 
-既にインストールされている白源フォントを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。
+既にインストールされている白源フォントを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。もしパッケージに何かしらの問題がある場合は、[パッケージのリポジトリ](https://github.com/kai2nenobu/chocolatey-packages/)でissueを投稿してください。
 
 # Screenshots
 
