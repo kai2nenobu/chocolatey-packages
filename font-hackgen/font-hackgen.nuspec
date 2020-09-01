@@ -3,16 +3,18 @@
   <metadata>
     <id>font-hackgen</id>
     <title>Programming Font HackGen</title>
-    <version>2.0.0</version>
+    <version>2.1.1</version>
     <authors>Yuko Otawara</authors>
     <owners>kai2nenobu</owners>
     <summary>HackGen is a composite font of Hack and GenJyuu-Gothic. プログラミングフォント 白源</summary>
-    <description><![CDATA[# HackGen [![font-hackgen version][font-hackgen_version]][font-hackgen_package]
+    <description><![CDATA[# HackGen
 
-[font-hackgen_version]: https://img.shields.io/chocolatey/v/font-hackgen.svg
+[font-hackgen_version]: https://img.shields.io/chocolatey/v/font-hackgen.svg?label=font-hackgen
 [font-hackgen_package]: https://chocolatey.org/packages/font-hackgen
+[font-hackgen-nerd_version]: https://img.shields.io/chocolatey/v/font-hackgen-nerd.svg?label=font-hackgen-nerd
+[font-hackgen-nerd_package]: https://chocolatey.org/packages/font-hackgen-nerd
 
-HackGen is a programming font that is a combination of Hack, an English font for programming, and GenJyuu-Gothic, a derivative of Source Han Sans.
+[HackGen](https://github.com/yuru7/HackGen) is a programming font that is a combination of Hack, an English font for programming, and GenJyuu-Gothic, a derivative of Source Han Sans.
 
 This package installs following fonts on system font folder (`C:\Windows\Fonts`).
 
@@ -23,14 +25,14 @@ This package installs following fonts on system font folder (`C:\Windows\Fonts`)
 
 If the installation or update of this package fails, it may be for the following reasons.
 
-- Hakuen is already installed.
+- HakuGen is already installed.
 - Some applications are using HakuGen.
 
-Remove the HackGen or close any applications that use HackGen before trying to install or update the package.
+Remove the HackGen or close any applications that use HackGen before trying to install or update the package. If you have a problem about this package, please visit [the package repository](https://github.com/kai2nenobu/chocolatey-packages/) and post a issue.
 
 # プログラミングフォント 白源
 
-白源（はくげん）は、プログラミング向け英文フォントHackと、源ノ角ゴシックの派生フォント源柔ゴシックを合成したプログラミングフォントです。
+[白源](https://github.com/yuru7/HackGen)（はくげん）は、プログラミング向け英文フォントHackと、源ノ角ゴシックの派生フォント源柔ゴシックを合成したプログラミングフォントです。
 
 このパッケージは以下のフォントをシステム全体にインストールします。（`C:\Windows\Fonts`にインストールされます）
 
@@ -44,17 +46,23 @@ Remove the HackGen or close any applications that use HackGen before trying to i
 - 白源フォントが既にインストールされている
 - 起動しているアプリケーションが白源フォントを使用している
 
-既にインストールされているフォントを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。
+既にインストールされている白源フォントを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。もしパッケージに何かしらの問題がある場合は、[パッケージのリポジトリ](https://github.com/kai2nenobu/chocolatey-packages/)でissueを投稿してください。
+
+# Screenshots
+
+| HackGen                                                               | HackGen35                                                                 |
+|-----------------------------------------------------------------------|---------------------------------------------------------------------------|
+| ![hackgen](https://github.com/yuru7/HackGen/raw/image/sc_hackgen.png) | ![hackgen35](https://github.com/yuru7/HackGen/raw/image/sc_hackgen35.png) |
 ]]></description>
     <projectUrl>https://qiita.com/tawara_/items/374f3ca0a386fab8b305</projectUrl>
     <projectSourceUrl>https://github.com/yuru7/HackGen</projectSourceUrl>
     <tags>font admin hack source-han-sans monospace programming truetype japanese</tags>
     <copyright>Yuko Otawara</copyright>
-    <licenseUrl>https://github.com/yuru7/HackGen/blob/v2.0.0/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/yuru7/HackGen/blob/v2.1.1/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- <iconUrl></iconUrl> -->
-    <releaseNotes>https://github.com/yuru7/HackGen/releases/tag/v2.0.0</releaseNotes>
-    <docsUrl>https://github.com/yuru7/HackGen/blob/v2.0.0/README.md</docsUrl>
+    <releaseNotes>https://github.com/yuru7/HackGen/releases/tag/v2.1.1</releaseNotes>
+    <docsUrl>https://github.com/yuru7/HackGen/blob/v2.1.1/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/yuru7/HackGen/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/font-hackgen</packageSourceUrl>
     <dependencies>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mape</id>
-    <version>1.0.20.0</version>
+    <version>1.0.21.0</version>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/mape</packageSourceUrl>
     <owners>kai2nenobu</owners>
     <title>May Authentication Proxies Explode</title>
@@ -17,16 +17,16 @@
     <bugTrackerUrl>https://github.com/ipponshimeji/MAPE/issues</bugTrackerUrl>
     <tags>proxy japanese</tags>
     <summary>May Authentication Proxies Explode (MAPE) is a proxy tool to mediate communications with other authentication proxies.</summary>
-    <description><![CDATA[# May Authentication Proxies Explode [![mape version][mape_version]][mape_package]
+    <description><![CDATA[# May Authentication Proxies Explode
 
-[mape_version]: https://img.shields.io/chocolatey/v/mape.svg
+[mape_version]: https://img.shields.io/chocolatey/v/mape.svg?label=mape
 [mape_package]: https://chocolatey.org/packages/mape
 
-May Authentication Proxies Explode (MAPE) is a transparent proxy tool. This package will download and install [MAPE](https://github.com/ipponshimeji/MAPE).
+May Authentication Proxies Explode (MAPE) is a proxy tool to mediate communications with other authentication proxies. This package will download and install [MAPE](https://github.com/ipponshimeji/MAPE).
 
 ## Install Information
 
-MAPE executables (`mape.exe` and `mapedgui.exe`) are installed at `%ChocolateyInstall%\lib\mape\MAPE` (typically `C:\ProgramData\chocolatey\lib\mape\MAPE`) and both are included in `PATH` environment variable.
+MAPE executables (`mape.exe` and `mapegui.exe`) are installed at `%ChocolateyInstall%\lib\mape\MAPE` (typically `C:\ProgramData\chocolatey\lib\mape\MAPE`) and both are included in `PATH` environment variable.
 
 Additionally, a shortcut to `mapegui.exe` is created and accessible from start menu.
 
