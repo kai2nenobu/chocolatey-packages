@@ -5,7 +5,7 @@ This directory contains sources of [![mape][mape_version]][mape_package] package
 [mape_version]: https://img.shields.io/chocolatey/v/mape.svg?label=mape
 [mape_package]: https://chocolatey.org/packages/mape
 
-May Authentication Proxies Explode (MAPE) is a transparent proxy tool. This package will download and install [MAPE](https://github.com/ipponshimeji/MAPE).
+May Authentication Proxies Explode (MAPE) is a proxy tool to mediate communications with other authentication proxies. This package will download and install [MAPE](https://github.com/ipponshimeji/MAPE).
 
 ## Install Information
 
