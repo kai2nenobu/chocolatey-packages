@@ -1,4 +1,4 @@
-This directory stores sources of two packages, [![font-hackgen][font-hackgen_version]][font-hackgen_package] and [![font-hackgen-nerd][font-hackgen-nerd_version]][font-hackgen-nerd_package].
+This directory contains sources of two packages, [![font-hackgen][font-hackgen_version]][font-hackgen_package] and [![font-hackgen-nerd][font-hackgen-nerd_version]][font-hackgen-nerd_package].
 <!-- First 2 lines are stripped by AU -->
 # HackGen
 
