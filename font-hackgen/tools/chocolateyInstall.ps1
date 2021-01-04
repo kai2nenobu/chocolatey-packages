@@ -4,13 +4,13 @@
 $toolsDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 . (Join-Path $toolsDir 'common.ps1')
 
-$hackgenBase = 'HackGen_v2.2.2'
+$hackgenBase = 'HackGen_v2.2.3'
 $extractDir = (Join-Path $toolsDir $hackgenBase)
 
 $packageArgs = @{
   PackageName   = 'font-hackgen'
-  Url           = 'https://github.com/yuru7/HackGen/releases/download/v2.2.2/HackGen_v2.2.2.zip'
-  Checksum      = '1bd8f6b9e15845f03c5e5cb7cd2721246428f391448eb654e8bc6e9decaf756c'
+  Url           = 'https://github.com/yuru7/HackGen/releases/download/v2.2.3/HackGen_v2.2.3.zip'
+  Checksum      = 'ef1c945ded28b3b7a56bed5bb5aaf53276ba4026dfcb7f7a6a64455770c4389e'
   ChecksumType  = 'sha256'
   UnzipLocation = $toolsDir
 }
