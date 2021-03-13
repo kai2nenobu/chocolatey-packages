@@ -18,8 +18,8 @@ This package installs following fonts on system font folder (`C:\Windows\Fonts`)
 
 If the installation or update of this package fails, it may be for the following reasons.
 
-- HakuGen is already installed.
-- Some applications are using HakuGen.
+- HackGen is already installed.
+- Some applications are using HackGen.
 
 Remove the HackGen or close any applications that use HackGen before trying to install or update the package. If you have a problem about this package, please visit [the package repository](https://github.com/kai2nenobu/chocolatey-packages/) and post a issue.
 
