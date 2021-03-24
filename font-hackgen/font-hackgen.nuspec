@@ -3,7 +3,7 @@
   <metadata>
     <id>font-hackgen</id>
     <title>Programming Font HackGen</title>
-    <version>2.3.1</version>
+    <version>2.3.2</version>
     <authors>Yuko Otawara</authors>
     <owners>kai2nenobu</owners>
     <summary>HackGen is a composite font of Hack and GenJyuu-Gothic. プログラミングフォント 白源</summary>
@@ -58,11 +58,11 @@ Remove the HackGen or close any applications that use HackGen before trying to i
     <projectSourceUrl>https://github.com/yuru7/HackGen</projectSourceUrl>
     <tags>font admin hack source-han-sans monospace programming truetype japanese</tags>
     <copyright>Yuko Otawara</copyright>
-    <licenseUrl>https://github.com/yuru7/HackGen/blob/v2.3.1/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/yuru7/HackGen/blob/v2.3.2/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- <iconUrl></iconUrl> -->
-    <releaseNotes>https://github.com/yuru7/HackGen/releases/tag/v2.3.1</releaseNotes>
-    <docsUrl>https://github.com/yuru7/HackGen/blob/v2.3.1/README.md</docsUrl>
+    <releaseNotes>https://github.com/yuru7/HackGen/releases/tag/v2.3.2</releaseNotes>
+    <docsUrl>https://github.com/yuru7/HackGen/blob/v2.3.2/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/yuru7/HackGen/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/font-hackgen</packageSourceUrl>
     <dependencies>
