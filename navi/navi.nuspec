@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>navi</id>
+    <title>navi</title>
+    <version>2.15.1-pre</version>
+    <authors>Denis Isidoro</authors>
+    <owners>kai2nenobu</owners>
+    <summary>An interactive cheatsheet tool for the command-line.</summary>
+    <description><![CDATA[
+[navi_version]: https://img.shields.io/chocolatey/v/navi.svg?label=navi
+[navi_package]: https://chocolatey.org/packages/navi
+
+# [navi](https://github.com/denisidoro/navi)
+
+An interactive cheatsheet tool for the command-line.
+
+[![Demo](https://asciinema.org/a/406461.svg)](https://asciinema.org/a/406461)
+
+**navi** allows you to browse through cheatsheets (that you may write yourself or download from maintainers) and execute commands. Suggested values for arguments are dynamically displayed in a list.
+
+#### Pros
+- it will spare you from knowing CLIs by heart
+- it will spare you from copy-pasting output from intermediate commands
+- it will make you type less
+- it will teach you new one-liners
+
+It uses [fzf](https://github.com/junegunn/fzf), [skim](https://github.com/lotabout/skim), or [Alfred](https://www.alfredapp.com/) under the hood and it can be either used as a command or as a shell widget (*à la* Ctrl-R).
+
+See the [document](https://github.com/denisidoro/navi/blob/vx.y.z/README.md) for more details.
+]]></description>
+    <projectUrl>https://github.com/denisidoro/navi</projectUrl>
+    <tags>shell bash rust cli snippets terminal command-line snippet cheatsheets</tags>
+    <copyright>Denis Isidoro</copyright>
+    <licenseUrl>https://github.com/denisidoro/navi/blob/vx.y.z/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl></iconUrl> -->
+    <releaseNotes>https://github.com/denisidoro/navi/releases/tag/vx.y.z</releaseNotes>
+    <docsUrl>https://github.com/denisidoro/navi/blob/vx.y.z/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/denisidoro/navi/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/navi</packageSourceUrl>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
