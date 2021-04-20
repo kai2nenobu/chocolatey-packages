@@ -121,4 +121,4 @@ function global:au_SearchReplace {
   }
 }
 
-Update-Package -ChecksumFor 64
+Update-Package -ChecksumFor none
