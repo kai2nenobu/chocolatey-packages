@@ -1,4 +1,4 @@
-This directory contains sources of [![navi][navi_version]][navi_version].
+This directory contains sources of [![navi][navi_version]][navi_package].
 <!-- First 2 lines are stripped by AU -->
 
 [navi_version]: https://img.shields.io/chocolatey/v/navi.svg?label=navi
