@@ -37,6 +37,7 @@ function global:au_SearchReplace {
     ".\navi.nuspec" = @{
       '(/denisidoro/navi/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
       '(/denisidoro/navi/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
+      '(/denisidoro/navi@)[^/<]*' = "`${1}$($Latest.Version)"
     }
   }
 }
