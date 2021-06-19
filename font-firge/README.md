@@ -1,13 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <id>font-firge</id>
-    <title>Programming Font Firge</title>
-    <version>0.0.2-pre</version>
-    <authors>Yuko Otawara</authors>
-    <owners>kai2nenobu</owners>
-    <summary>Firge is a composite font of Fira Mono and GenShin-Gothic. プログラミングフォント Firge</summary>
-    <description><![CDATA[# Firge
+This directory contains sources of [![font-firge][font-firge_version]][font-firge_package] package.
+<!-- First 2 lines are stripped by AU -->
+# Firge
 
 [font-firge_version]: https://img.shields.io/chocolatey/v/font-firge.svg?label=font-firge
 [font-firge_package]: https://chocolatey.org/packages/font-firge
@@ -51,23 +44,3 @@ Fira Mono と源真ゴシックを合成したプログラミングフォント�
 | Firge                                                                                                           | Firge35                                                                                                           |
 |-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | ![firge](https://user-images.githubusercontent.com/13458509/121860146-87c82880-cd33-11eb-8c8a-3838ec926d69.png) | ![firge35](https://user-images.githubusercontent.com/13458509/121860153-8991ec00-cd33-11eb-90be-3fd23b407d0c.png) |
-]]></description>
-    <projectUrl>https://github.com/yuru7/Firge</projectUrl>
-    <projectSourceUrl>https://github.com/yuru7/Firge</projectSourceUrl>
-    <tags>font admin hack source-han-sans monospace programming truetype japanese</tags>
-    <copyright>Yuko Otawara</copyright>
-    <licenseUrl>https://github.com/yuru7/Firge/blob/v0.0.2/LICENSE.txt</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!-- <iconUrl></iconUrl> -->
-    <releaseNotes>https://github.com/yuru7/Firge/releases/tag/v0.0.2</releaseNotes>
-    <docsUrl>https://github.com/yuru7/Firge/blob/v0.0.2/README.md</docsUrl>
-    <bugTrackerUrl>https://github.com/yuru7/Firge/issues</bugTrackerUrl>
-    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/font-firge</packageSourceUrl>
-    <dependencies>
-      <dependency id="chocolatey-font-helpers.extension" version="0.0.2" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
-</package>
