@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>font-firge</id>
+    <title>Programming Font Firge</title>
+    <version>0.0.2-pre</version>
+    <authors>Yuko Otawara</authors>
+    <owners>kai2nenobu</owners>
+    <summary>Firge is a composite font of Fira Mono and GenShin-Gothic. プログラミングフォント Firge</summary>
+    <description><![CDATA[# Firge
+
+[font-firge_version]: https://img.shields.io/chocolatey/v/font-firge.svg?label=font-firge
+[font-firge_package]: https://chocolatey.org/packages/font-firge
+
+[Firge](https://github.com/yuru7/Firge) is a programming font that is a combination of Fira Mono and GenShin-Gothic.
+
+This package installs following fonts on system font folder (`C:\Windows\Fonts`).
+
+- `Firge`
+- `Firge Console`
+- `Firge35`
+- `Firge35 Console`
+
+If the installation or update of this package fails, it may be for the following reasons.
+
+- Firge is already installed.
+- Some applications are using Firge.
+
+Remove the Firge or close any applications that use Firge before trying to install or update the package. If you have a problem about this package, please visit [the package repository](https://github.com/kai2nenobu/chocolatey-packages/) and post a issue.
+
+# プログラミングフォント ファージ
+
+Fira Mono と源真ゴシックを合成したプログラミングフォントです。
+
+このパッケージは以下のフォントをシステム全体にインストールします。（`C:\Windows\Fonts`にインストールされます）
+
+- `Firge`
+- `Firge Console`
+- `Firge35`
+- `Firge35 Console`
+
+このパッケージのインストールやアップデートに失敗する場合、以下の理由が考えられます。
+
+- ファージが既にインストールされている
+- 起動しているアプリケーションがファージを使用している
+
+既にインストールされているファージを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。もしパッケージに何かしらの問題がある場合は、[パッケージのリポジトリ](https://github.com/kai2nenobu/chocolatey-packages/)でissueを投稿してください。
+
+# Screenshots
+
+| Firge                                                                                                           | Firge35                                                                                                           |
+|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| ![firge](https://user-images.githubusercontent.com/13458509/121860146-87c82880-cd33-11eb-8c8a-3838ec926d69.png) | ![firge35](https://user-images.githubusercontent.com/13458509/121860153-8991ec00-cd33-11eb-90be-3fd23b407d0c.png) |
+]]></description>
+    <projectUrl>https://github.com/yuru7/Firge</projectUrl>
+    <projectSourceUrl>https://github.com/yuru7/Firge</projectSourceUrl>
+    <tags>font admin hack source-han-sans monospace programming truetype japanese</tags>
+    <copyright>Yuko Otawara</copyright>
+    <licenseUrl>https://github.com/yuru7/Firge/blob/v0.0.1/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl></iconUrl> -->
+    <releaseNotes>https://github.com/yuru7/Firge/releases/tag/v0.0.1</releaseNotes>
+    <docsUrl>https://github.com/yuru7/Firge/blob/v0.0.1/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/yuru7/Firge/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/font-firge</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
