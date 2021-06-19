@@ -41,10 +41,10 @@ Fira Mono と源真ゴシックを合成したプログラミングフォント�
 
 このパッケージのインストールやアップデートに失敗する場合、以下の理由が考えられます。
 
-- ファージフォントが既にインストールされている
-- 起動しているアプリケーションがファージフォントを使用している
+- ファージが既にインストールされている
+- 起動しているアプリケーションがファージを使用している
 
-既にインストールされているファージフォントを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。もしパッケージに何かしらの問題がある場合は、[パッケージのリポジトリ](https://github.com/kai2nenobu/chocolatey-packages/)でissueを投稿してください。
+既にインストールされているファージを削除したり、フォントを使用しているアプリケーションを閉じてからインストール、アップデートを試みてください。もしパッケージに何かしらの問題がある場合は、[パッケージのリポジトリ](https://github.com/kai2nenobu/chocolatey-packages/)でissueを投稿してください。
 
 # Screenshots
 
@@ -56,11 +56,11 @@ Fira Mono と源真ゴシックを合成したプログラミングフォント�
     <projectSourceUrl>https://github.com/yuru7/Firge</projectSourceUrl>
     <tags>font admin hack source-han-sans monospace programming truetype japanese</tags>
     <copyright>Yuko Otawara</copyright>
-    <licenseUrl>https://github.com/yuru7/Firge/blob/v0.0.2/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/yuru7/Firge/blob/v0.0.1/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- <iconUrl></iconUrl> -->
-    <releaseNotes>https://github.com/yuru7/Firge/releases/tag/v0.0.2</releaseNotes>
-    <docsUrl>https://github.com/yuru7/Firge/blob/v0.0.2/README.md</docsUrl>
+    <releaseNotes>https://github.com/yuru7/Firge/releases/tag/v0.0.1</releaseNotes>
+    <docsUrl>https://github.com/yuru7/Firge/blob/v0.0.1/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/yuru7/Firge/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/font-firge</packageSourceUrl>
     <dependencies>
