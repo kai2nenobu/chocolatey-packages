@@ -76,7 +76,7 @@ possible and make false positives as minimal as possible.
     <docsUrl>https://github.com/rhysd/actionlint/blob/v1.4.1/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/rhysd/actionlint/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/rhysd/actionlint</projectSourceUrl>
-    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/actionlint</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/actionlint</packageSourceUrl>
     <dependencies></dependencies>
   </metadata>
   <files>
