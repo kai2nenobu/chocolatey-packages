@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>actionlint</id>
+    <title>actionlint</title>
+    <version>1.4.0</version>
+    <authors>rhysd</authors>
+    <owners>kai2nenobu</owners>
+    <summary>Static checker for GitHub Actions workflow files</summary>
+    <description>actionlint is a static checker for GitHub Actions workflow files</description>
+    <projectUrl>https://github.com/rhysd/actionlint</projectUrl>
+    <tags>ci cli github-actions lint linter</tags>
+    <copyright>rhysd</copyright>
+    <licenseUrl>https://github.com/rhysd/actionlint/blob/main/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl></iconUrl> -->
+    <releaseNotes>https://github.com/rhysd/actionlint/releases/tag/v1.4.0</releaseNotes>
+    <docsUrl>https://github.com/rhysd/actionlint/blob/main/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/rhysd/actionlint/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/rhysd/actionlint</projectSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/actionlint</packageSourceUrl>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
