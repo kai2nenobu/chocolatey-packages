@@ -16,6 +16,7 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 
 | id                                | title                                                                        | version                                                                              | embedded? | auto update? |
 |-----------------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------|--------------|
+| [actionlint](actionlint)          | [actionlint](https://github.com/rhysd/actionlint)                            | [![actionlint version][actionlint_version]][actionlint_package]                      | ✓         | ✓            |
 | [font-firge](font-firge)          | [Programming Font Firge](https://github.com/yuru7/Firge)                     | [![font-firge version][font-firge_version]][font-firge_package]                      |           | ✓            |
 | [font-hackgen](font-hackgen)      | [Programming Font HackGen](https://github.com/yuru7/HackGen)                 | [![font-hackgen version][font-hackgen_version]][font-hackgen_package]                |           | ✓            |
 | [font-hackgen-nerd](font-hackgen) | [Programming Font HackGen with Nerd Fonts](https://github.com/yuru7/HackGen) | [![font-hackgen-nerd version][font-hackgen-nerd_version]][font-hackgen-nerd_package] |           | ✓            |
@@ -23,6 +24,8 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 | [navi](navi)                      | [navi](https://github.com/denisidoro/navi)                                   | [![navi version][navi_version]][navi_package]                                        | ✓         | ✓            |
 | [pet](pet)                        | [pet : CLI Snippet Manager](https://github.com/knqyf263/pet)                 | [![pet version][pet_version]][pet_package]                                           | ✓         | ✓            |
 
+[actionlint_version]: https://img.shields.io/chocolatey/v/actionlint.svg
+[actionlint_package]: https://chocolatey.org/packages/actionlint
 [font-firge_version]: https://img.shields.io/chocolatey/v/font-firge.svg
 [font-firge_package]: https://chocolatey.org/packages/font-firge
 [font-hackgen_version]: https://img.shields.io/chocolatey/v/font-hackgen.svg
