@@ -1,9 +1,11 @@
-This directory contains sources of [![font-firge][font-firge_version]][font-firge_package] package.
+This directory contains sources of two packages, [![font-firge][font-firge_version]][font-firge_package] and [![font-firge-nerd][font-firge-nerd_version]][font-firge-nerd_package].
 <!-- First 2 lines are stripped by AU -->
 # Firge
 
 [font-firge_version]: https://img.shields.io/chocolatey/v/font-firge.svg?label=font-firge
 [font-firge_package]: https://chocolatey.org/packages/font-firge
+[font-firge-nerd_version]: https://img.shields.io/chocolatey/v/font-firge.svg?label=font-firge-nerd
+[font-firge-nerd_package]: https://chocolatey.org/packages/font-firge-nerd
 
 [Firge](https://github.com/yuru7/Firge) is a programming font that is a combination of Fira Mono and GenShin-Gothic.
 
@@ -42,5 +44,5 @@ Fira Mono と源真ゴシックを合成したプログラミングフォント�
 # Screenshots
 
 | Firge                                                                                                           | Firge35                                                                                                           |
-|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | ![firge](https://user-images.githubusercontent.com/13458509/121860146-87c82880-cd33-11eb-8c8a-3838ec926d69.png) | ![firge35](https://user-images.githubusercontent.com/13458509/121860153-8991ec00-cd33-11eb-90be-3fd23b407d0c.png) |
