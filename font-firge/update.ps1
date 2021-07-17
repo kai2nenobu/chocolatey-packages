@@ -14,32 +14,55 @@ function global:au_GetLatest {
       Write-Warning ('Ignore invalid tag name: "{0}"' -f $tag)
       continue
     }
-    $version = $tag -replace "^v",""
+    $version = $tag -replace "^v", ""
     $normalZip = $release.assets | Where-Object { $_.name -eq "Firge_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
+    $nerdZip = $release.assets | Where-Object { $_.name -eq "FirgeNerd_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
     return @{
-      Tag = $tag
+      Tag     = $tag
       Version = $version
-      #PackageName = 'font-firge'
-      #Title = 'Programming Font Firge'
-      URL32 = $normalZip
-      Prefix = 'Firge'
+      Streams = [ordered] @{
+        'normal' = @{
+          PackageName = 'font-firge'
+          Title       = 'Programming Font Firge'
+          URL32       = $normalZip
+          Prefix      = 'Firge'
+        }
+        'nerd'   = @{
+          PackageName = 'font-firge-nerd'
+          Title       = 'Programming Font Firge with Nerd Fonts'
+          URL32       = $nerdZip
+          Prefix      = 'FirgeNerd'
+        }
+      }
     }
   }
 }
 
 function global:au_SearchReplace {
   # Replacement for font names
+  if ($Latest.Stream -eq 'nerd') {
+    $fontReplacement = 'Firge${1}Nerd${3}'
+  }
+  else {
+    $fontReplacement = 'Firge${1}${3}'
+  }
   @{
-    ".\font-firge.nuspec" = @{
-      '(/Firge/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
-      '(/Firge/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
-      #'(?i)(^\s*\<title\>).*(\<\/title\>)' = "`${1}$($Latest.Title)`${2}"
+    ".\font-firge.nuspec"           = @{
+      '(/Firge/blob/)[^/<]*'               = "`${1}$($Latest.Tag)"
+      '(/Firge/releases/tag/)[^/<]*'       = "`${1}$($Latest.Tag)"
+      '(?i)(^\s*\<title\>).*(\<\/title\>)' = "`${1}$($Latest.Title)`${2}"
     }
     ".\tools\ChocolateyInstall.ps1" = @{
-      '^([$]firgeBase\s*=).*' = "`${1} '$($Latest.Prefix)_$($Latest.Tag)'"
-      #'^(\s*PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
-      '^(\s*Url\s*=).*' = "`${1} '$($Latest.URL32)'"
-      '^(\s*Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
+      '^([$]firgeBase\s*=).*'   = "`${1} '$($Latest.Prefix)_$($Latest.Tag)'"
+      '^(\s*PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
+      '^(\s*Url\s*=).*'         = "`${1} '$($Latest.URL32)'"
+      '^(\s*Checksum\s*=).*'    = "`${1} '$($Latest.Checksum32)'"
+    }
+    ".\tools\common.ps1"            = @{
+      'Firge(35)?(Nerd)?(Console)?-' = $fontReplacement + '-'
+    }
+    ".\README.md"                   = @{
+      '`Firge(35)?(Nerd)?( Console)?`' = '`' + $fontReplacement + '`'
     }
   }
 }
