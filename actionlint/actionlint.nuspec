@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>actionlint</id>
+    <title>actionlint</title>
+    <version>1.4.1</version>
+    <authors>rhysd</authors>
+    <owners>kai2nenobu</owners>
+    <summary>Static checker for GitHub Actions workflow files</summary>
+    <description><![CDATA[
+[actionlint_version]: https://img.shields.io/chocolatey/v/actionlint.svg?label=actionlint
+[actionlint_package]: https://chocolatey.org/packages/actionlint
+
+actionlint
+==========
+
+[actionlint][repo] is a static checker for GitHub Actions workflow files. [Try it online!][playground]
+
+Features:
+
+- **Syntax check for workflow files** to check unexpected or missing keys following [workflow syntax][syntax-doc]
+- **Strong type check for `${{ }}` expressions** to catch several semantic errors like access to not existing property,
+  type mismatches, ...
+- **[shellcheck][] and [pyflakes][] integrations** for scripts in `run:`
+- **Other several useful checks**; [glob syntax][filter-pattern-doc] validation, dependencies check for `needs:`,
+  runner label validation, cron syntax validation, ...
+
+See [README](https://github.com/rhysd/actionlint/blob/v1.4.1/README.md) for more details.
+
+**Example of broken workflow:**
+
+```yaml
+on:
+  push:
+    branch: main
+    tags:
+      - 'v\d+'
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [macos-latest, linux-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ matrix.platform }}-node-${{ hashFiles('**/package-lock.json') }}
+        if: ${{ github.repository.permissions.admin == true }}
+      - run: npm install && npm test
+```
+
+**Output from actionlint:**
+
+<img src="https://github.com/rhysd/ss/blob/master/actionlint/main.png?raw=true" alt="output example" width="850" height="621"/>
+
+Basically all you need to do is running `acitonlint` command in your repository. actionlint automatically detects workflows in
+your repository and reports errors in them. actionlint focuses on finding out mistakes. It tries to catch errors as much as
+possible and make false positives as minimal as possible.
+
+[repo]: https://github.com/rhysd/actionlint
+[playground]: https://rhysd.github.io/actionlint/
+[shellcheck]: https://github.com/koalaman/shellcheck
+[shellcheck-install]: https://github.com/koalaman/shellcheck#installing
+[pyflakes]: https://github.com/PyCQA/pyflakes
+[filter-pattern-doc]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+]]></description>
+    <projectUrl>https://github.com/rhysd/actionlint</projectUrl>
+    <tags>ci cli github-actions lint linter</tags>
+    <copyright>rhysd</copyright>
+    <licenseUrl>https://github.com/rhysd/actionlint/blob/v1.4.1/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl></iconUrl> -->
+    <releaseNotes>https://github.com/rhysd/actionlint/releases/tag/v1.4.1</releaseNotes>
+    <docsUrl>https://github.com/rhysd/actionlint/blob/v1.4.1/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/rhysd/actionlint/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/rhysd/actionlint</projectSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/actionlint</packageSourceUrl>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
