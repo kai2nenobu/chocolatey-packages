@@ -6,15 +6,12 @@ function global:au_GetLatest {
   $releases_info = Invoke-RestMethod -Uri $releases
   foreach ($release in $releases_info) {
     $tag = $release.tag_name
-    if ($release.prerelease) {
-      Write-Warning ('Ignore prerelease version: "{0}"' -f $tag)
-      continue
-    }
+    $pre = if ($release.prerelease) { '-pre' } else { '' }
     if (-not ($tag -match '^v[0-9]+\.[0-9]+\.[0-9]+')) {
       Write-Warning ('Ignore invalid tag name: "{0}"' -f $tag)
       continue
     }
-    $version = $tag -replace "^v",""
+    $version = ($tag -replace "^v","") + $pre
     $normalZip = $release.assets | Where-Object { $_.name -eq "HackGen_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
     $nerdZip = $release.assets | Where-Object { $_.name -eq "HackGenNerd_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
     return @{
