@@ -3,7 +3,7 @@
   <metadata>
     <id>actionlint</id>
     <title>actionlint</title>
-    <version>1.6.10</version>
+    <version>1.6.11</version>
     <authors>rhysd</authors>
     <owners>kai2nenobu</owners>
     <summary>Static checker for GitHub Actions workflow files</summary>
@@ -25,7 +25,7 @@ Features:
 - **Other several useful checks**; [glob syntax][filter-pattern-doc] validation, dependencies check for `needs:`,
   runner label validation, cron syntax validation, ...
 
-See [README](https://github.com/rhysd/actionlint/blob/v1.6.10/README.md) for more details.
+See [README](https://github.com/rhysd/actionlint/blob/v1.6.11/README.md) for more details.
 
 **Example of broken workflow:**
 
@@ -69,11 +69,11 @@ possible and make false positives as minimal as possible.
     <projectUrl>https://github.com/rhysd/actionlint</projectUrl>
     <tags>ci cli github-actions lint linter</tags>
     <copyright>rhysd</copyright>
-    <licenseUrl>https://github.com/rhysd/actionlint/blob/v1.6.10/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/rhysd/actionlint/blob/v1.6.11/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- <iconUrl></iconUrl> -->
-    <releaseNotes>https://github.com/rhysd/actionlint/releases/tag/v1.6.10</releaseNotes>
-    <docsUrl>https://github.com/rhysd/actionlint/blob/v1.6.10/README.md</docsUrl>
+    <releaseNotes>https://github.com/rhysd/actionlint/releases/tag/v1.6.11</releaseNotes>
+    <docsUrl>https://github.com/rhysd/actionlint/blob/v1.6.11/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/rhysd/actionlint/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/rhysd/actionlint</projectSourceUrl>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/actionlint</packageSourceUrl>
