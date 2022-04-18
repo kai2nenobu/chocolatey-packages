@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>font-hackgen-nerd</id>
-    <title>Programming Font HackGen with Nerd Fonts</title>
-    <version>2.6.1</version>
+    <id>font-hackgen</id>
+    <title>Programming Font HackGen</title>
+    <version>2.6.2-pre</version>
     <authors>Yuko Otawara</authors>
     <owners>kai2nenobu</owners>
     <summary>HackGen is a composite font of Hack and GenJyuu-Gothic. プログラミングフォント 白源</summary>
@@ -18,10 +18,10 @@
 
 This package installs following fonts on system font folder (`C:\Windows\Fonts`).
 
-- `HackGenNerd`
-- `HackGenNerd Console`
-- `HackGen35Nerd`
-- `HackGen35Nerd Console`
+- `HackGen`
+- `HackGen Console`
+- `HackGen35`
+- `HackGen35 Console`
 
 If the installation or update of this package fails, it may be for the following reasons.
 
@@ -36,10 +36,10 @@ Remove the HackGen or close any applications that use HackGen before trying to i
 
 このパッケージは以下のフォントをシステム全体にインストールします。（`C:\Windows\Fonts`にインストールされます）
 
-- `HackGenNerd`
-- `HackGenNerd Console`
-- `HackGen35Nerd`
-- `HackGen35Nerd Console`
+- `HackGen`
+- `HackGen Console`
+- `HackGen35`
+- `HackGen35 Console`
 
 このパッケージのインストールやアップデートに失敗する場合、以下の理由が考えられます。
 

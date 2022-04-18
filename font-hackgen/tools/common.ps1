@@ -1,10 +1,10 @@
 ﻿$hackgenFonts = @(
-  'HackGenNerd-Bold.ttf'
-  'HackGenNerd-Regular.ttf'
-  'HackGen35Nerd-Bold.ttf'
-  'HackGen35Nerd-Regular.ttf'
-  'HackGen35NerdConsole-Bold.ttf'
-  'HackGen35NerdConsole-Regular.ttf'
-  'HackGenNerdConsole-Bold.ttf'
-  'HackGenNerdConsole-Regular.ttf'
+  'HackGen-Bold.ttf'
+  'HackGen-Regular.ttf'
+  'HackGen35-Bold.ttf'
+  'HackGen35-Regular.ttf'
+  'HackGen35Console-Bold.ttf'
+  'HackGen35Console-Regular.ttf'
+  'HackGenConsole-Bold.ttf'
+  'HackGenConsole-Regular.ttf'
 )
