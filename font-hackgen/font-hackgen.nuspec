@@ -50,15 +50,18 @@ Remove the HackGen or close any applications that use HackGen before trying to i
 
 # Screenshots
 
-| HackGen                                                               | HackGen35                                                                 |
-|-----------------------------------------------------------------------|---------------------------------------------------------------------------|
-| ![hackgen](https://github.com/yuru7/HackGen/raw/image/sc_hackgen.png) | ![hackgen35](https://github.com/yuru7/HackGen/raw/image/sc_hackgen35.png) |
+| HackGen                | HackGen35                  |
+| ---------------------- | -------------------------- |
+| ![hackgen][hackgen-ss] | ![hackgen35][hackgen35-ss] |
+
+[hackgen-ss]: https://user-images.githubusercontent.com/13458509/133928601-cb1d3e00-6c4b-4ce5-a945-44ae2baa81e0.png
+[hackgen35-ss]: https://user-images.githubusercontent.com/13458509/133928624-77ed3d0b-8e6c-46c1-89e1-3e85f6d0c215.png
 ]]></description>
     <projectUrl>https://qiita.com/tawara_/items/374f3ca0a386fab8b305</projectUrl>
     <projectSourceUrl>https://github.com/yuru7/HackGen</projectSourceUrl>
     <tags>font admin hack source-han-sans monospace programming truetype japanese</tags>
     <copyright>Yuko Otawara</copyright>
-    <licenseUrl>https://github.com/yuru7/HackGen/blob/v2.6.1/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/yuru7/HackGen/blob/v2.6.1/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- <iconUrl></iconUrl> -->
     <releaseNotes>https://github.com/yuru7/HackGen/releases/tag/v2.6.1</releaseNotes>
