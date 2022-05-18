@@ -3,7 +3,7 @@
   <metadata>
     <id>navi</id>
     <title>navi</title>
-    <version>2.20.0</version>
+    <version>2.20.1</version>
     <authors>Denis Isidoro</authors>
     <owners>kai2nenobu</owners>
     <summary>An interactive cheatsheet tool for the command-line.</summary>
@@ -27,16 +27,16 @@ An interactive cheatsheet tool for the command-line.
 
 It uses [fzf](https://github.com/junegunn/fzf), [skim](https://github.com/lotabout/skim), or [Alfred](https://www.alfredapp.com/) under the hood and it can be either used as a command or as a shell widget (*à la* Ctrl-R).
 
-See the [document](https://github.com/denisidoro/navi/blob/v2.20.0/README.md) for more details.
+See the [document](https://github.com/denisidoro/navi/blob/v2.20.1/README.md) for more details.
 ]]></description>
     <projectUrl>https://github.com/denisidoro/navi</projectUrl>
     <tags>shell bash rust cli snippets terminal command-line snippet cheatsheets</tags>
     <copyright>Denis Isidoro</copyright>
-    <licenseUrl>https://github.com/denisidoro/navi/blob/v2.20.0/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/denisidoro/navi/blob/v2.20.1/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/denisidoro/navi@2.20.0/assets/icon.png</iconUrl>
-    <releaseNotes>https://github.com/denisidoro/navi/releases/tag/v2.20.0</releaseNotes>
-    <docsUrl>https://github.com/denisidoro/navi/blob/v2.20.0/README.md</docsUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/denisidoro/navi@2.20.1/assets/icon.png</iconUrl>
+    <releaseNotes>https://github.com/denisidoro/navi/releases/tag/v2.20.1</releaseNotes>
+    <docsUrl>https://github.com/denisidoro/navi/blob/v2.20.1/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/denisidoro/navi/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/navi</packageSourceUrl>
     <dependencies></dependencies>
