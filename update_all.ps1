@@ -10,7 +10,7 @@ $Options = [ordered]@{
     Timeout       = 100                                     #Connection timeout in seconds
     UpdateTimeout = 1200                                    #Update timeout in seconds
     Threads       = 10                                      #Number of background jobs to use
-    Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
+    Push          = $Env:AU_DRY_RUN -eq 'false'                 #Push to chocolatey
     PushAll       = $true                                   #Allow to push multiple packages at once
     PluginPath    = '_au_plugins'                                      #Path to user plugins
     IgnoreOn      = @(                                      #Error message parts to set the package ignore status
@@ -61,15 +61,19 @@ $Options = [ordered]@{
         Path   = "$PSScriptRoot\Update-AUPackages.md", "$PSScriptRoot\Update-History.md"       #List of files to add to the gist
     }
 
-    Git = @{
-        User     = ''                                       #Git username, leave empty if github api key is used
-        Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
-    }
+    Git = if ($Env:AU_DRY_RUN -eq 'false') {
+        @{
+            User     = ''                                       #Git username, leave empty if github api key is used
+            Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
+        }
+    } else {}
 
-    GitReleases  = @{
-        ApiToken    = $Env:github_api_key                   #Your github api key
-        ReleaseType = 'package'                             #Either 1 release per date, or 1 release per package
-    }
+    GitReleases   = if ($Env:AU_DRY_RUN -eq 'false') {
+        @{
+            ApiToken    = $Env:github_api_key                   #Your github api key
+            ReleaseType = 'package'                             #Either 1 release per date, or 1 release per package
+        }
+    } else {}
 
     Slack = @{
       WebHookUrl = $Env:slack_webhook_url
@@ -101,5 +105,7 @@ $global:au_Root         = $Root          #Path to the AU packages
 $global:au_GalleryUrl   = ''             #URL to package gallery, leave empty for Chocolatey Gallery
 $global:info = updateall -Name $Name -Options $Options
 
-#Uncomment to fail the build on AppVeyor on any package error
-if ($global:info.error_count.total) { throw 'Errors during update' }
+# Throw an error when update for any packages are failed
+if (($global:info | Where-Object { $_.Error }).Length -gt 0) {
+    throw 'Errors during update'
+}

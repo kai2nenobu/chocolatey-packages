@@ -8,6 +8,9 @@ on:
         required: false
   schedule:
     - cron:  '5 0/8 * * *'
+  push:
+    branches:
+      - package/*
 
 jobs:
   auto_update:
@@ -38,12 +41,9 @@ jobs:
         env:
           au_version: master
       - name: Check update for packages
-        run: |
-          $ErrorActionPreference = 'Continue'
-          ./update_all.ps1 -ForcedPackages '${{ github.event.inputs.forced_packages }}'
-          7z a au_temp.zip $Env:TEMP\chocolatey\au\*
+        run: ./update_all.ps1 -ForcedPackages '${{ github.event.inputs.forced_packages }}'
         env:
-          au_push: true
+          AU_DRY_RUN: ${{ github.event_name == 'push' }}
           # Github token to commit pushed packages to repository
           github_user_repo: ${{ github.repository }}
           github_api_key: ${{ secrets.AU_GITHUB_API_KEY }}
@@ -63,7 +63,11 @@ jobs:
 
           # GitHub Actions build url which points to this build
           GH_ACTIONS_BUILD_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      - name: Archive AU temporary files
+        if: always()
+        run: 7z a au_temp.zip $Env:TEMP\chocolatey\au\*
       - name: Upload update results
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: update_results
@@ -71,3 +75,4 @@ jobs:
             update_info.xml
             Update-AUPackages.md
             au_temp.zip
+            **/*.nupkg

@@ -13,7 +13,7 @@ function global:au_GetLatest {
     }
     $version = ($tag -replace "^v","") + $pre
     $normalZip = $release.assets | Where-Object { $_.name -eq "HackGen_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
-    $nerdZip = $release.assets | Where-Object { $_.name -eq "HackGenNerd_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
+    $nerdZip = $release.assets | Where-Object { $_.name -eq "HackGen_NF_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
     return @{
       Tag = $tag
       Version = $version
@@ -28,7 +28,7 @@ function global:au_GetLatest {
           PackageName = 'font-hackgen-nerd'
           Title = 'Programming Font HackGen with Nerd Fonts'
           URL32 = $nerdZip
-          Prefix = 'HackGenNerd'
+          Prefix = 'HackGen_NF'
         }
       }
     }
@@ -36,12 +36,6 @@ function global:au_GetLatest {
 }
 
 function global:au_SearchReplace {
-  # Replacement for font names
-  if ($Latest.Stream -eq 'nerd') {
-    $fontReplacement = 'HackGen${1}Nerd${3}'
-  } else {
-    $fontReplacement = 'HackGen${1}${3}'
-  }
   @{
     ".\font-hackgen.nuspec" = @{
       '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
@@ -49,18 +43,29 @@ function global:au_SearchReplace {
       '(?i)(^\s*\<title\>).*(\<\/title\>)' = "`${1}$($Latest.Title)`${2}"
     }
     ".\tools\ChocolateyInstall.ps1" = @{
+      "'common-(.*)\.ps1'" = "'common-$($Latest.PackageName).ps1'"
       '^([$]hackgenBase\s*=).*' = "`${1} '$($Latest.Prefix)_$($Latest.Tag)'"
       '^(\s*PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
       '^(\s*Url\s*=).*' = "`${1} '$($Latest.URL32)'"
       '^(\s*Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
     }
-    ".\tools\common.ps1" = @{
-      'HackGen(35)?(Nerd)?(Console)?-' = $fontReplacement + '-'
-    }
-    ".\README.md" = @{
-      '`HackGen(35)?(Nerd)?( Console)?`' = '`' + $fontReplacement + '`'
+    ".\tools\ChocolateyBeforeModify.ps1" = @{
+      "'common-(.*)\.ps1'" = "'common-$($Latest.PackageName).ps1'"
     }
   }
+}
+
+function global:au_BeforeUpdate() {
+  # Load font names from a common file
+  . "tools/common-$($Latest.PackageName).ps1"
+  $fontNames = ($hackgenFonts.Values | ForEach-Object { "- ``$_``" }) -join "`n"
+  $regex = '(<!-- Begin font names -->)([^<]*)(<!-- End font names -->)'
+  $fontNamesReplacement = '$1' + "`n" + $fontNames + "`n" + '$3'
+  # Replace font names in README.md
+  $readme = Get-Content -Raw -Path README.md -Encoding UTF8
+  $readme | % { $_ -replace $regex,$fontNamesReplacement } `
+    | % { [Text.Encoding]::UTF8.GetBytes($_) } `
+    | Set-Content -Encoding Byte -Path README.md
 }
 
 Update-Package
