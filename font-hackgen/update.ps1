@@ -13,7 +13,7 @@ function global:au_GetLatest {
     }
     $version = ($tag -replace "^v","") + $pre
     $normalZip = $release.assets | Where-Object { $_.name -eq "HackGen_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
-    $nerdZip = $release.assets | Where-Object { $_.name -eq "HackGenNerd_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
+    $nerdZip = $release.assets | Where-Object { $_.name -eq "HackGen_NF_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
     return @{
       Tag = $tag
       Version = $version
@@ -28,7 +28,7 @@ function global:au_GetLatest {
           PackageName = 'font-hackgen-nerd'
           Title = 'Programming Font HackGen with Nerd Fonts'
           URL32 = $nerdZip
-          Prefix = 'HackGenNerd'
+          Prefix = 'HackGen_NF'
         }
       }
     }
