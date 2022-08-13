@@ -36,12 +36,6 @@ function global:au_GetLatest {
 }
 
 function global:au_SearchReplace {
-  # Replacement for font names
-  if ($Latest.Stream -eq 'nerd') {
-    $fontReplacement = 'HackGen${1}Nerd${3}'
-  } else {
-    $fontReplacement = 'HackGen${1}${3}'
-  }
   @{
     ".\font-hackgen.nuspec" = @{
       '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
@@ -58,10 +52,20 @@ function global:au_SearchReplace {
     ".\tools\ChocolateyBeforeModify.ps1" = @{
       "'common-(.*)\.ps1'" = "'common-$($Latest.PackageName).ps1'"
     }
-    ".\README.md" = @{
-      '`HackGen(35)?(Nerd)?( Console)?`' = '`' + $fontReplacement + '`'
-    }
   }
+}
+
+function global:au_BeforeUpdate() {
+  # Load font names from a common file
+  . "tools/common-$($Latest.PackageName).ps1"
+  $fontNames = ($hackgenFonts.Values | ForEach-Object { "- ``$_``" }) -join "`n"
+  $regex = '(<!-- Begin font names -->)([^<]*)(<!-- End font names -->)'
+  $fontNamesReplacement = '$1' + "`n" + $fontNames + "`n" + '$3'
+  # Replace font names in README.md
+  $readme = Get-Content -Raw -Path README.md -Encoding UTF8
+  $readme | % { $_ -replace $regex,$fontNamesReplacement } `
+    | % { [Text.Encoding]::UTF8.GetBytes($_) } `
+    | Set-Content -Encoding Byte -Path README.md
 }
 
 Update-Package

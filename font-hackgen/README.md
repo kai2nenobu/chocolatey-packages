@@ -11,10 +11,12 @@ This directory contains sources of two packages, [![font-hackgen][font-hackgen_v
 
 This package installs following fonts on system font folder (`C:\Windows\Fonts`).
 
+<!-- Begin font names -->
 - `HackGen`
 - `HackGen Console`
 - `HackGen35`
 - `HackGen35 Console`
+<!-- End font names -->
 
 If the installation or update of this package fails, it may be for the following reasons.
 
@@ -29,10 +31,12 @@ Remove the HackGen or close any applications that use HackGen before trying to i
 
 このパッケージは以下のフォントをシステム全体にインストールします。（`C:\Windows\Fonts`にインストールされます）
 
+<!-- Begin font names -->
 - `HackGen`
 - `HackGen Console`
 - `HackGen35`
 - `HackGen35 Console`
+<!-- End font names -->
 
 このパッケージのインストールやアップデートに失敗する場合、以下の理由が考えられます。
 
