@@ -74,3 +74,4 @@ jobs:
             update_info.xml
             Update-AUPackages.md
             au_temp.zip
+            **/*.nupkg
