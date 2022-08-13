@@ -3,7 +3,7 @@
   <metadata>
     <id>font-hackgen</id>
     <title>Programming Font HackGen</title>
-    <version>2.6.4</version>
+    <version>2.7.0</version>
     <authors>Yuko Otawara</authors>
     <owners>kai2nenobu</owners>
     <summary>HackGen is a composite font of Hack and GenJyuu-Gothic. プログラミングフォント 白源</summary>
@@ -18,10 +18,16 @@
 
 This package installs following fonts on system font folder (`C:\Windows\Fonts`).
 
-- `HackGen`
-- `HackGen Console`
-- `HackGen35`
-- `HackGen35 Console`
+<!-- Begin font names -->
+- `HackGen (Regular)`
+- `HackGen (Bold)`
+- `HackGen Console (Regular)`
+- `HackGen Console (Bold)`
+- `HackGen35 (Regular)`
+- `HackGen35 (Bold)`
+- `HackGen35 Console (Regular)`
+- `HackGen35 Console (Bold)`
+<!-- End font names -->
 
 If the installation or update of this package fails, it may be for the following reasons.
 
@@ -36,10 +42,16 @@ Remove the HackGen or close any applications that use HackGen before trying to i
 
 このパッケージは以下のフォントをシステム全体にインストールします。（`C:\Windows\Fonts`にインストールされます）
 
-- `HackGen`
-- `HackGen Console`
-- `HackGen35`
-- `HackGen35 Console`
+<!-- Begin font names -->
+- `HackGen (Regular)`
+- `HackGen (Bold)`
+- `HackGen Console (Regular)`
+- `HackGen Console (Bold)`
+- `HackGen35 (Regular)`
+- `HackGen35 (Bold)`
+- `HackGen35 Console (Regular)`
+- `HackGen35 Console (Bold)`
+<!-- End font names -->
 
 このパッケージのインストールやアップデートに失敗する場合、以下の理由が考えられます。
 
@@ -61,11 +73,11 @@ Remove the HackGen or close any applications that use HackGen before trying to i
     <projectSourceUrl>https://github.com/yuru7/HackGen</projectSourceUrl>
     <tags>font admin hack source-han-sans monospace programming truetype japanese</tags>
     <copyright>Yuko Otawara</copyright>
-    <licenseUrl>https://github.com/yuru7/HackGen/blob/v2.6.4/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/yuru7/HackGen/blob/v2.7.0/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- <iconUrl></iconUrl> -->
-    <releaseNotes>https://github.com/yuru7/HackGen/releases/tag/v2.6.4</releaseNotes>
-    <docsUrl>https://github.com/yuru7/HackGen/blob/v2.6.4/README.md</docsUrl>
+    <releaseNotes>https://github.com/yuru7/HackGen/releases/tag/v2.7.0</releaseNotes>
+    <docsUrl>https://github.com/yuru7/HackGen/blob/v2.7.0/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/yuru7/HackGen/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey-packages/tree/master/font-hackgen</packageSourceUrl>
     <dependencies>
