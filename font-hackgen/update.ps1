@@ -60,7 +60,7 @@ function global:au_BeforeUpdate() {
   . "tools/common-$($Latest.PackageName).ps1"
   $fontNames = ($hackgenFonts.Values | ForEach-Object { "- ``$_``" }) -join "`n"
   $regex = '(<!-- Begin font names -->)([^<]*)(<!-- End font names -->)'
-  $fontNamesReplacement = '$1' + "`n" + $fontNames + "`n" + '$3'
+  $fontNamesReplacement = '$1' + "`n`n" + $fontNames + "`n`n" + '$3'
   # Replace font names in README.md
   $readme = Get-Content -Raw -Path README.md -Encoding UTF8
   $readme | % { $_ -replace $regex,$fontNamesReplacement } `
