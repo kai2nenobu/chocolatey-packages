@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://github.com/rhysd/actionlint/releases/download/v1.6.21/actionlint_1.6.21_windows_386.zip
-   x64: https://github.com/rhysd/actionlint/releases/download/v1.6.21/actionlint_1.6.21_windows_amd64.zip
+   x32: https://github.com/rhysd/actionlint/releases/download/v1.6.22/actionlint_1.6.22_windows_386.zip
+   x64: https://github.com/rhysd/actionlint/releases/download/v1.6.22/actionlint_1.6.22_windows_amd64.zip
 
    to download the installer.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 97EB2CC211A8C67ADAE2A453CB51A3400A9916CBBEF5D5DDA61FB634F5D61B13
-   checksum64: 2265F57F96D34B06F080357A78CFE4BC9A327F92809E78DABED4D46A6D66BF3C
+   checksum32: 1396715A2C179EB41F930D470D1DC8EB82FE6D093AD5B7CE0DF7E2AB7632A974
+   checksum64: C0007E418E6CD2008769E55666229B50677F85975676C4246BAEE5EC3AE9A2B5
 
 Using AU:
 
