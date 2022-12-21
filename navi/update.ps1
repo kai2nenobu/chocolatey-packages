@@ -2,8 +2,7 @@
 
 function global:au_GetLatest {
   ## Find a latest release and extract installer URL from GitHub Releases
-  $releases = 'https://api.github.com/repos/denisidoro/navi/releases'
-  $releases_info = Invoke-RestMethod -Uri $releases
+  $releases_info = gh api 'repos/denisidoro/navi/releases' | ConvertFrom-Json
   foreach ($release in $releases_info) {
     if (-not $release.prerelease) {
       $tag = $release.tag_name

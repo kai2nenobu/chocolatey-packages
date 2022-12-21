@@ -43,6 +43,7 @@ jobs:
       - name: Check update for packages
         run: ./update_all.ps1 -ForcedPackages '${{ github.event.inputs.forced_packages }}'
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # To authenticate GitHub CLI
           AU_DRY_RUN: ${{ github.event_name == 'push' }}
           # Github token to commit pushed packages to repository
           github_user_repo: ${{ github.repository }}
