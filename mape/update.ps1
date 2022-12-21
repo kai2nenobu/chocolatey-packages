@@ -3,8 +3,7 @@ Import-Module au
 function global:au_GetLatest {
   ## Find a latest version from a5m2 history page
   $regex = [regex]'(?i)^mape_([.\d]+)_.*\.zip$'
-  $releases = 'https://api.github.com/repos/ipponshimeji/MAPE/contents/Releases?ref=master'
-  $releases_info = Invoke-RestMethod -Uri $releases
+  $releases_info = gh api 'repos/ipponshimeji/MAPE/contents/Releases?ref=master' | ConvertFrom-Json
   $latestRelease = $releases_info | Where-Object { $_.name -match $regex } `
     | Sort-Object { [System.Version]($regex.Match($_.name).Groups[1].Value) } -Descending `
     | Select-Object -First 1
