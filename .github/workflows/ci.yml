@@ -1,0 +1,57 @@
+name: Continuous Packaging
+
+on:
+  pull_request:
+    branches: [main]
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+jobs:
+  extract_packages:
+    runs-on: ubuntu-20.04
+    if: startsWith(github.head_ref, 'package/')
+    outputs:
+      TARGET_PACKAGES: ${{ steps.extract_packages.outputs.TARGET_PACKAGES }}
+    steps:
+      - name: Extract a package from source branch name
+        id: extract_packages
+        run: |
+          package=$(echo '${{ github.head_ref }}' | sed -e 's@^[^/]*/@@')
+          echo "TARGET_PACKAGES=[$package]" >> "$GITHUB_OUTPUT"
+  build:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        PACKAGE: ${{ fromJSON(needs.extract_packages.outputs.TARGET_PACKAGES) }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check a build environment
+        run: |
+          Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version
+          $PSVersionTable
+          git --version
+          choco --version
+          cmd /c "set" | grep -i 'github\|runner' | sort
+      - name: Build (if needed)
+        working-directory: ${{ matrix.PACKAGE }}
+        run: |
+          if (Test-Path -LiteralPath build.bat) {
+            .\build.bat
+          } else {
+            'Nothing to build'
+          }
+      - name: Package
+        working-directory: ${{ matrix.PACKAGE }}
+        run: |
+          choco pack
+          if (Test-Path -LiteralPath test.bat) {
+            .\test.bat
+          }
+      - name: Save a package as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.PACKAGE }}
+          path: '**/*.nupkg'
