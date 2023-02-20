@@ -26,6 +26,7 @@ jobs:
     runs-on: windows-2019
     needs: extract
     strategy:
+      fail-fast: false
       matrix:
         PACKAGE: ${{ fromJSON(needs.extract.outputs.TARGET_PACKAGES) }}
     steps:
