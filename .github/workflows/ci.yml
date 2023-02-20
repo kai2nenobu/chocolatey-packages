@@ -19,8 +19,9 @@ jobs:
       - name: Extract a package from source branch name
         id: extract_packages
         run: |
-          package=$(echo '${{ github.head_ref }}' | sed -e 's@^[^/]*/@@')
-          echo "TARGET_PACKAGES=[$package]" >> "$GITHUB_OUTPUT"
+          package=$(echo '${{ github.head_ref }}' | sed -e 's@[^/]*/@@' -e 's@^@["@' -e 's@$@"]@')
+          echo "TARGET_PACKAGES=$package"
+          echo "TARGET_PACKAGES=$package" >> "$GITHUB_OUTPUT"
   build:
     runs-on: windows-2019
     strategy:
