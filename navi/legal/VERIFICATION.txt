@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://github.com/denisidoro/navi/releases/download/v2.20.1/navi-v2.20.1-x86_64-pc-windows-gnu.zip
+   x64: https://github.com/denisidoro/navi/releases/download/v2.22.1/navi-v2.22.1-x86_64-pc-windows-gnu.zip
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 6AD19DA3B553A6950375B1F423EC1C5F150A4B46D622B2D72A004C4E0A493191
+   checksum64: F7084B049698599973D5B684F06D35B8666E6F5634162BC340E9A20EB94B82A1
 
 Using AU:
 
