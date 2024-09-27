@@ -2,7 +2,7 @@ name: Continuous Packaging
 
 on:
   pull_request:
-    branches: [main]
+    branches: [master]
     types:
       - opened
       - reopened
@@ -10,7 +10,7 @@ on:
       - closed
 
 jobs:
-  extract_packages:
+  extract:
     runs-on: ubuntu-20.04
     if: startsWith(github.head_ref, 'package/')
     outputs:
@@ -19,13 +19,16 @@ jobs:
       - name: Extract a package from source branch name
         id: extract_packages
         run: |
-          package=$(echo '${{ github.head_ref }}' | sed -e 's@^[^/]*/@@')
-          echo "TARGET_PACKAGES=[$package]" >> "$GITHUB_OUTPUT"
+          package=$(echo '${{ github.head_ref }}' | sed -e 's@[^/]*/@@' -e 's@^@["@' -e 's@$@"]@')
+          echo "TARGET_PACKAGES=$package"
+          echo "TARGET_PACKAGES=$package" >> "$GITHUB_OUTPUT"
   build:
     runs-on: windows-2019
+    needs: extract
     strategy:
+      fail-fast: false
       matrix:
-        PACKAGE: ${{ fromJSON(needs.extract_packages.outputs.TARGET_PACKAGES) }}
+        PACKAGE: ${{ fromJSON(needs.extract.outputs.TARGET_PACKAGES) }}
     steps:
       - uses: actions/checkout@v3
       - name: Check a build environment
