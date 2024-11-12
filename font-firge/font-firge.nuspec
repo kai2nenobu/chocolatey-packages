@@ -58,7 +58,7 @@ Fira Mono と源真ゴシックを合成したプログラミングフォント�
     <projectSourceUrl>https://github.com/yuru7/Firge</projectSourceUrl>
     <tags>font admin hack source-han-sans monospace programming truetype japanese</tags>
     <copyright>Yuko Otawara</copyright>
-    <licenseUrl>https://github.com/yuru7/Firge/blob/v0.3.0/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/yuru7/Firge/blob/v0.3.0/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- <iconUrl></iconUrl> -->
     <releaseNotes>https://github.com/yuru7/Firge/releases/tag/v0.3.0</releaseNotes>
