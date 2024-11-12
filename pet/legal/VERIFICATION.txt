@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://github.com/knqyf263/pet/releases/download/v0.8.4/pet_0.8.4_windows_386.tar.gz
-   x64: https://github.com/knqyf263/pet/releases/download/v0.8.4/pet_0.8.4_windows_amd64.tar.gz
+   x32: https://github.com/knqyf263/pet/releases/download/v0.9.1/pet_0.9.1_windows_386.tar.gz
+   x64: https://github.com/knqyf263/pet/releases/download/v0.9.1/pet_0.9.1_windows_amd64.tar.gz
 
    to download the installer.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: A4E44517D1596107D5E032F0AEE1E9B0318117C14F9DF284DE0F54E3CFC2A93A
-   checksum64: 06579DD9E14B77EE9D2950E90B3CD6A3D6F42EFB239D4FEA6327CB96D6BE8BE9
+   checksum32: F22231C87953AD577DF246A33600DAE03F56D5910E0FFA7758F717BAA2CB3B11
+   checksum64: EA7F0D9D389A29AA5138F86575B89F80A9D64C642DF475A67F3572E4CA4A682A
 
 Using AU:
 
