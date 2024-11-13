@@ -11,10 +11,10 @@ This directory contains sources of two packages, [![font-firge][font-firge_versi
 
 This package installs following fonts on system font folder (`C:\Windows\Fonts`).
 
-- `Firge`
-- `Firge Console`
-- `Firge35`
-- `Firge35 Console`
+- `FirgeNerd`
+- `FirgeNerd Console`
+- `Firge35Nerd`
+- `Firge35Nerd Console`
 
 If the installation or update of this package fails, it may be for the following reasons.
 
@@ -29,10 +29,10 @@ Fira Mono と源真ゴシックを合成したプログラミングフォント�
 
 このパッケージは以下のフォントをシステム全体にインストールします。（`C:\Windows\Fonts`にインストールされます）
 
-- `Firge`
-- `Firge Console`
-- `Firge35`
-- `Firge35 Console`
+- `FirgeNerd`
+- `FirgeNerd Console`
+- `Firge35Nerd`
+- `Firge35Nerd Console`
 
 このパッケージのインストールやアップデートに失敗する場合、以下の理由が考えられます。
 

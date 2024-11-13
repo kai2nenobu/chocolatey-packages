@@ -4,13 +4,13 @@
 $toolsDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 . (Join-Path $toolsDir 'common.ps1')
 
-$firgeBase = 'Firge_v0.3.0'
+$firgeBase = 'FirgeNerd_v0.3.0'
 $extractDir = (Join-Path $toolsDir $firgeBase)
 
 $packageArgs = @{
-  PackageName   = 'font-firge'
-  Url           = 'https://github.com/yuru7/Firge/releases/download/v0.3.0/Firge_v0.3.0.zip'
-  Checksum      = 'c986f621000a6598064c7e2078322ed02040af4f7804d258033df949b35b0527'
+  PackageName   = 'font-firge-nerd'
+  Url           = 'https://github.com/yuru7/Firge/releases/download/v0.3.0/FirgeNerd_v0.3.0.zip'
+  Checksum      = '54cd76378fbc5025f42d441d95ca6ec1d3ecc4270e6107558840fed7c04cfe4f'
   ChecksumType  = 'sha256'
   UnzipLocation = $toolsDir
 }
