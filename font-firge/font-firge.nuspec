@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>font-firge-nerd</id>
-    <title>Programming Font Firge with Nerd Fonts</title>
+    <id>font-firge</id>
+    <title>Programming Font Firge</title>
     <version>0.3.0</version>
     <authors>Yuko Otawara</authors>
     <owners>kai2nenobu</owners>
@@ -18,10 +18,10 @@
 
 This package installs following fonts on system font folder (`C:\Windows\Fonts`).
 
-- `FirgeNerd`
-- `FirgeNerd Console`
-- `Firge35Nerd`
-- `Firge35Nerd Console`
+- `Firge`
+- `Firge Console`
+- `Firge35`
+- `Firge35 Console`
 
 If the installation or update of this package fails, it may be for the following reasons.
 
@@ -36,10 +36,10 @@ Fira Mono と源真ゴシックを合成したプログラミングフォント�
 
 このパッケージは以下のフォントをシステム全体にインストールします。（`C:\Windows\Fonts`にインストールされます）
 
-- `FirgeNerd`
-- `FirgeNerd Console`
-- `Firge35Nerd`
-- `Firge35Nerd Console`
+- `Firge`
+- `Firge Console`
+- `Firge35`
+- `Firge35 Console`
 
 このパッケージのインストールやアップデートに失敗する場合、以下の理由が考えられます。
 

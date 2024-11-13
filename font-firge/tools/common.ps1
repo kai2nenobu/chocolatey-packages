@@ -1,10 +1,10 @@
 ﻿$firgeFonts = @(
-  'FirgeNerd-Bold.ttf'
-  'FirgeNerd-Regular.ttf'
-  'Firge35Nerd-Bold.ttf'
-  'Firge35Nerd-Regular.ttf'
-  'Firge35NerdConsole-Bold.ttf'
-  'Firge35NerdConsole-Regular.ttf'
-  'FirgeNerdConsole-Bold.ttf'
-  'FirgeNerdConsole-Regular.ttf'
+  'Firge-Bold.ttf'
+  'Firge-Regular.ttf'
+  'Firge35-Bold.ttf'
+  'Firge35-Regular.ttf'
+  'Firge35Console-Bold.ttf'
+  'Firge35Console-Regular.ttf'
+  'FirgeConsole-Bold.ttf'
+  'FirgeConsole-Regular.ttf'
 )
