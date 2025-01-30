@@ -21,6 +21,7 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 | [font-firge-nerd](font-firge-nerd) | [Programming Font Firge with Nerd Fonts](https://github.com/yuru7/Firge)    | [![font-firge-nerd version][font-firge-nerd_version]][font-firge-nerd_package]       |           | ✓            |
 | [font-hackgen](font-hackgen)      | [Programming Font HackGen](https://github.com/yuru7/HackGen)                 | [![font-hackgen version][font-hackgen_version]][font-hackgen_package]                |           | ✓            |
 | [font-hackgen-nerd](font-hackgen) | [Programming Font HackGen with Nerd Fonts](https://github.com/yuru7/HackGen) | [![font-hackgen-nerd version][font-hackgen-nerd_version]][font-hackgen-nerd_package] |           | ✓            |
+| [git-credential-keepassxc](git-credential-keepassxc) | [git-credential-keepassxc](https://github.com/Frederick888/git-credential-keepassxc) | [![git-credential-keepassxc version][git-credential-keepassxc_version]][git-credential-keepassxc_package] | ✓        | ✓            |
 | [mape](mape)                      | [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE)   | [![mape version][mape_version]][mape_package]                                        |           | ✓            |
 | [navi](navi)                      | [navi](https://github.com/denisidoro/navi)                                   | [![navi version][navi_version]][navi_package]                                        | ✓         | ✓            |
 | [pet](pet)                        | [pet : CLI Snippet Manager](https://github.com/knqyf263/pet)                 | [![pet version][pet_version]][pet_package]                                           | ✓         | ✓            |
@@ -35,6 +36,8 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 [font-hackgen_package]: https://chocolatey.org/packages/font-hackgen
 [font-hackgen-nerd_version]: https://img.shields.io/chocolatey/v/font-hackgen-nerd.svg
 [font-hackgen-nerd_package]: https://chocolatey.org/packages/font-hackgen-nerd
+[git-credential-keepassxc_version]: https://img.shields.io/chocolatey/v/git-credential-keepassxc.svg
+[git-credential-keepassxc_package]: https://chocolatey.org/packages/git-credential-keepassxc
 [navi_version]: https://img.shields.io/chocolatey/v/navi.svg
 [navi_package]: https://chocolatey.org/packages/navi
 [mape_version]: https://img.shields.io/chocolatey/v/mape.svg
