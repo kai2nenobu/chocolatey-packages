@@ -14,7 +14,7 @@ on:
 
 jobs:
   auto_update:
-    runs-on: windows-2019
+    runs-on: windows-2022
     defaults:
       run:
         shell: powershell
@@ -35,11 +35,7 @@ jobs:
           git config --global user.name "Chocolatey"
           git config --global core.safecrlf false
       - name: Install AU
-        run: |
-          git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
-          . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
-        env:
-          au_version: master
+        run: Install-Module Chocolatey-AU -Force
       - name: Check update for packages
         run: ./update_all.ps1 -ForcedPackages '${{ github.event.inputs.forced_packages }}'
         env:
