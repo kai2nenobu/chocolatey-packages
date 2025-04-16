@@ -13,6 +13,8 @@ jobs:
   extract_packages:
     runs-on: ubuntu-20.04
     if: startsWith(github.head_ref, 'package/')
+    permissions: {}
+    timeout-minutes: 3
     outputs:
       TARGET_PACKAGES: ${{ steps.extract_packages.outputs.TARGET_PACKAGES }}
     steps:
@@ -26,6 +28,9 @@ jobs:
   build:
     runs-on: windows-2019
     needs: extract_packages
+    permissions:
+      contents: read
+    timeout-minutes: 10
     strategy:
       matrix:
         PACKAGE: ${{ fromJSON(needs.extract_packages.outputs.TARGET_PACKAGES) }}
