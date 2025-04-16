@@ -11,23 +11,31 @@ on:
 
 jobs:
   extract_packages:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     if: startsWith(github.head_ref, 'package/')
+    permissions: {}
+    timeout-minutes: 3
     outputs:
       TARGET_PACKAGES: ${{ steps.extract_packages.outputs.TARGET_PACKAGES }}
     steps:
       - name: Extract a package from source branch name
         id: extract_packages
         run: |
-          package=$(echo '${{ github.head_ref }}' | sed -e 's@^[^/]*/@@')
+          package=$(echo "$BRANCH_NAME" | sed -e 's@^[^/]*/@@')
           echo "TARGET_PACKAGES=[$package]" >> "$GITHUB_OUTPUT"
+        env:
+          BRANCH_NAME: ${{ github.head_ref }}
   build:
     runs-on: windows-2019
+    needs: extract_packages
+    permissions:
+      contents: read
+    timeout-minutes: 10
     strategy:
       matrix:
         PACKAGE: ${{ fromJSON(needs.extract_packages.outputs.TARGET_PACKAGES) }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Check a build environment
         run: |
           Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version
@@ -51,7 +59,7 @@ jobs:
             .\test.bat
           }
       - name: Save a package as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: ${{ matrix.PACKAGE }}
           path: '**/*.nupkg'
