@@ -40,8 +40,9 @@ jobs:
       - name: Install AU
         run: Install-Module Chocolatey-AU -Force
       - name: Check update for packages
-        run: ./update_all.ps1 -ForcedPackages '${{ github.event.inputs.forced_packages }}'
+        run: ./update_all.ps1 -ForcedPackages "$env:FORCED_PACKAGES"
         env:
+          FORCED_PACKAGES: ${{ github.event.inputs.forced_packages }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # To authenticate GitHub CLI
           AU_DRY_RUN: ${{ github.event_name == 'push' }}
           # Github token to commit pushed packages to repository
