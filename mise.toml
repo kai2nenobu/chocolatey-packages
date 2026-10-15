@@ -2,5 +2,10 @@
 hk = "latest"
 jactionlint = "latest"
 
+[tasks.setup]
+run = [
+    "hk install --global",
+]
+
 [tasks.pre-commit]
 run = "hk run pre-commit"
