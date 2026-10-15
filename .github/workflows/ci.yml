@@ -9,6 +9,10 @@ on:
       - synchronize
       - closed
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   extract_packages:
     runs-on: ubuntu-24.04
@@ -21,12 +25,12 @@ jobs:
       - name: Extract a package from source branch name
         id: extract_packages
         run: |
-          package=$(echo "$BRANCH_NAME" | sed -e 's@^[^/]*/@@')
+          package=${BRANCH_NAME#package/}  # パッケージ名を抽出
           echo "TARGET_PACKAGES=[$package]" >> "$GITHUB_OUTPUT"
         env:
           BRANCH_NAME: ${{ github.head_ref }}
   build:
-    runs-on: windows-2019
+    runs-on: windows-2022
     needs: extract_packages
     permissions:
       contents: read
@@ -36,6 +40,8 @@ jobs:
         PACKAGE: ${{ fromJSON(needs.extract_packages.outputs.TARGET_PACKAGES) }}
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
       - name: Check a build environment
         run: |
           Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version
